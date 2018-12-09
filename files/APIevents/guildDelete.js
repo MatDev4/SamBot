@@ -24,7 +24,7 @@ module.exports = (client, guild, message) => {
         .setThumbnail(guild.iconURL)
     .addField("🐦 Nom", guild.name, true)
     .addField("🆔 ID", guild.id, true)
-    .addField("👑 Propriétaire", guild.owner.tag, true)
+    .addField("👑 Propriétaire", guild.owner.user.tag, true)
     .addField("📂 Créé le", `${CreateD[2]} ${month[guild.createdAt.getMonth()]} ${CreateD[3]} à ${CreateD[4]}`, true)
     .addField("👨 Membres", guild.memberCount, true)
     .setTimestamp(new Date())
