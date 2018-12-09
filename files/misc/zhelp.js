@@ -10,7 +10,7 @@ var prefix = (botconfig.prefix)
 module.exports.run = async (client, message, args) => {
     if (message.content.indexOf(prefix) !== 0) return;
     if (message.channel.type === "dm") return;
-    if(message.author.bot) return;
+    //if(message.author.bot) return;
 
     let f = misc.fleche
     let SamMenu = misc.SamMenu
