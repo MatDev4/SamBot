@@ -1,0 +1,32 @@
+{
+  "name": "sambot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ze_Dreams",
+  "license": "ISC",
+  "dependencies": {
+    "arcadia-module": "^0.1.0",
+    "canvas-constructor": "^1.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "discord.js": "^11.4.2",
+    "figlet": "^1.2.0",
+    "google": "^2.1.0",
+    "google-translate-api": "^2.3.0",
+    "humanize-duration": "^3.15.3",
+    "i18n": "^0.8.3",
+    "idiotic-api": "^0.2.11",
+    "language-translator": "^1.2.2",
+    "ms": "^2.1.1",
+    "npm": "^6.4.1",
+    "opusscript": "0.0.6",
+    "querystring": "^0.2.0",
+    "relevant-urban": "^2.0.0",
+    "snekfetch": "^4.0.4",
+    "superagent": "^3.8.3",
+    "ytdl-core": "^0.26.3"
+  }
+}

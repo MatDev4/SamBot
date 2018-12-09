@@ -1,0 +1,19 @@
+{
+    "prefix": "s!",
+    "version": "vB1.6.0",
+    "ownerid": "263713074t630885376",
+
+    "invitelink": "https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786",
+    "noperminvitelink": "https://discordapp.com/oauth2/authorize/?permissions=0&scope=bot&client_id=481753714982518786",
+
+
+    "bicon": "client.user.avatarURL",
+    "uincon": "message.author.avatarURL",
+    "sicon": "message.guild.iconURL",
+    "red": "#b70000",
+    "orange": "#ff6a00",
+    "green": "#36393f",
+    "purple": "#36393f",
+    "discordblack": "#36393f",
+    "discordblue": "#36393f"
+}
