@@ -20,6 +20,7 @@ module.exports = (client, guild, message) => {
 
     const guildCreateEmbed = new Discord.RichEmbed()
     .setColor('#5AED49')
+    .setThumbnail(guild.iconURL)
     .setAuthor("Serveur rejoint... :)", 'https://cdn.pixabay.com/photo/2014/03/25/17/00/plus-297823_960_720.png')
     .setDescription(`J'ai rejoint un nouveau serveur ! Je suis désormais sur __${client.guilds.size}__ serveurs !`)
     .addField("🐦 Nom", guild.name, true)
