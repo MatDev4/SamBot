@@ -38,5 +38,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "spotify-track"
+    name: "spotify-track-info"
 }
