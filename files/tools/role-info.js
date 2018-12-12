@@ -52,7 +52,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("👥 Porté par", `${role.members.size} personne(s)`, true)
     .addBlankField(false)
     .addField("🔐 Rôle modifiable", tf[role.editable.toString()], true)
-    .addField("🔏 Rôle spécial",tf[role.managed.toString()], true)
+    .addField("🔏 Rôle d'un Bot",tf[role.managed.toString()], true)
     message.channel.send(RoleInfoEmbed)
 
 }
