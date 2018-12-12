@@ -4,7 +4,6 @@ let botconfig = require("../botconfig.json");
 let misc = require("../misc.json");
 const client = new Discord.Client({disableEveryone: true});
 const ms = require('ms');
-const lang = require('i18n');
 //const superagent = require("superagent");
 
 var prefix = (botconfig.prefix)
@@ -52,8 +51,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("💳 Rôle créé le", `${CreateD[2]} ${month[role.createdAt.getMonth()]} ${CreateD[3]} à ${CreateD[4]}`, true)
     .addField("👥 Porté par", `${role.members.size} personnes`, true)
     .addBlankField(false)
-    .addField("🔐 Editable", tf[role.editable.toString()], true)
-    .addField("🔏 Manage",tf[role.managed.toString()], true)
+    .addField("🔐 Rôle modifiable", tf[role.editable.toString()], true)
+    .addField("🔏 Rôle spécial",tf[role.managed.toString()], true)
     message.channel.send(RoleInfoEmbed)
 
 }
