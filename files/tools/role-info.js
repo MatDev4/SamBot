@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("🆔 ID", role.id, true)
     .addField("#⃣ Couleur", role.hexColor, true)
     .addField("💳 Rôle créé le", `${CreateD[2]} ${month[role.createdAt.getMonth()]} ${CreateD[3]} à ${CreateD[4]}`, true)
-    .addField("👥 Porté par", `${role.members.size} personnes`, true)
+    .addField("👥 Porté par", `${role.members.size} personne(s)`, true)
     .addBlankField(false)
     .addField("🔐 Rôle modifiable", tf[role.editable.toString()], true)
     .addField("🔏 Rôle spécial",tf[role.managed.toString()], true)
