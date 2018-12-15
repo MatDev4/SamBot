@@ -204,6 +204,7 @@ client.on("message", message => {
 /*FS END*/
 /* i18n */
 const i18n = require('i18n');
+const path = require('path');
 
 const locales = ['fr'];
 const defaultLocale = 'fr';
