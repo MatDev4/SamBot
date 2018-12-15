@@ -14,30 +14,26 @@ module.exports.run = async (client, message, args) => {
     //if(message.author.bot) return;
 
     let f = misc.fleche
-    let SamMenu = misc.SamMenu
-    let SamCard = misc.SamCard
-    let SamPhoto = misc.SamPhoto
-    let SamEye = misc.SamEye
-    let SamCamera = misc.SamCamera
-    let SamData = misc.SamData
-    let SamDM = misc.SamDM
-    let SamDownload = misc.SamDownload
+    let ON = misc.DiscordOnline
+    let OFF = misc.DiscordOffline
+    let WIP = misc.DiscordIdle
+
     let discordblack = botconfig.discordblack
 
 
     const HelpEmbed = new Discord.RichEmbed()
     .setColor(discordblack)
-    .setFooter(`SamBot | Powered by UniX | <>: Champ requis [<>]: Champ optionnel`)
+    .setFooter(`SamBot | <>: Champ requis [<>]: Champ optionnel`)
     .setTitle("Documentation")
-    .setDescription(`${SamDM} Bienvenue dans la documentation de SamBot !\n Mon préfixe actuel est __**${botconfig.prefix}**__`)
-    .addField(`${SamCard} Commandes Fun`, cmdh.helpfun, true)
-    .addField(`${SamEye} Utilitaires`, cmdh.helptools, true)
-    .addField(`${SamCamera} Divers`, cmdh.helpmisc, true)
-    .addField(`${SamPhoto} Images`,cmdh.helpimg, true)
-    .addField(`${SamData} Modération`, cmdh.helpmod, true)
-    .addField(`${SamDownload} Commandes réservées`, cmdh.helpdev, true)
+    .setDescription(`Bienvenue dans la documentation de SamBot !\n Mon préfixe actuel est __**${botconfig.prefix}**__`)
+    .addField(`${OFF} | 🍪 Commandes Fun`, cmdh.helpfun, true)
+    .addField(`${ON} |  Utilitaires`, cmdh.helptools, true)
+    .addField(`${ON} | Divers`, cmdh.helpmisc, true)
+    .addField(`${ON} | Images`,cmdh.helpimg, true)
+    .addField(`${WIP} | Modération`, cmdh.helpmod, true)
+    .addField(`${ON} | Commandes réservées`, cmdh.helpdev, true)
     .addField("Liens", `[Invite-moi](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786) | [Mon support](https://discord.gg/Y8GgT2g) | [Vote sur DBL](https://discord.gg/Y8GgT2g)`)
-
+    .addField("Légendes", `${ON} ${f} Module fonctionnel\n${WIP} ${f} Module en développement, risque de bugs\n${OFF} ${f} Module inutilisable`, true)
 
   message.channel.send(HelpEmbed)
 }
