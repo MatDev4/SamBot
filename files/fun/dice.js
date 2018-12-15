@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fs = require("fs");
 let botconfig = require("../botconfig.json");
 let misc = require("../misc.json");
+const i18n = require('i18n');
 const client = new Discord.Client({disableEveryone: true});
 const lang = require('i18n');
 //const superagent = require("superagent");

@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const misc = require('../misc.json');
+const i18n = require('i18n');
 
 
 module.exports.run = async (client, message, args) => {

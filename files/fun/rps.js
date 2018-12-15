@@ -3,6 +3,7 @@ const fs = require("fs");
 let botconfig = require("../botconfig.json");
 let misc = require("../misc.json");
 let cmdh = require("../cmdh.json");
+const i18n = require('i18n');
 const client = new Discord.Client({disableEveryone: true});
 
 var prefix = (botconfig.prefix)

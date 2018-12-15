@@ -4,6 +4,7 @@ let botconfig = require("../botconfig.json");
 let misc = require("../misc.json");
 const client = new Discord.Client({disableEveryone: true});
 const ms = require('ms');
+const i18n = require('i18n');
 //const superagent = require("superagent");
 
 var prefix = (botconfig.prefix)

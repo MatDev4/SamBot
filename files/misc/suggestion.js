@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fs = require("fs");
 let botconfig = require("../botconfig.json");
 let misc = require("../misc.json");
+const i18n = require('i18n');
 let cmdh = require("../cmdh.json");
 const client = new Discord.Client({disableEveryone: true});
 
@@ -37,7 +38,7 @@ module.exports.run = async (client, message, args) => {
     }
     client.guilds.get('496373309621927956').channels.get('508216407696080896').send(SuggestionsEmbed).then(async msg => {
         await msg.react('✅')
-        await msg.react('❌')          
+        await msg.react('❌')
               });
 
 }
