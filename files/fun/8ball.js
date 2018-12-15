@@ -15,17 +15,17 @@ module.exports.run = async (bot, message, args) => {
     if(message.author.bot) return;
     let blue = botconfig.discordblue
 
-    if (!args[2]) return message.channel.send("Merci d'indiquer la question à poser.");
-    let answer = ["Non !", "Oui !", "Possible...", "Chut ! Je ne peux pas me concentrer...", "JAMAIS !", "Ouiii", "Nooooooooon !"]
+    if (!args[2]) return message.channel.send(i18n.t('8ball.no-args2'));
+    let answer = [i18n.t('8ball.A1'), i18n.t('8ball.A2'), i18n.t('8ball.A3'), i18n.t('8ball.A4'), i18n.t('8ball.A5'), i18n.t('8ball.A6'), i18n.t('8ball.A7')]
     let result = Math.floor((Math.random() * answer.length));
 
     let question = args.slice().join(" ");
 
     let BallEmbed = new Discord.RichEmbed()
     .setColor(blue)
-    .setTitle(`🎱 ${message.author.username} a demandé`)
-    .setDescription(`\`${question}\``)
-    .addField("Ma boule de cristal m'indique que...", `\`${answer[result]}\``)
+    .setTitle("🎱 8ball")
+    .addField(`${i18n.t('8ball.Field1')}`, `\`${question}\``, true)
+    .addField("i18n.t('8ball.Field2')", `\`${answer[result]}\``, true)
     message.channel.send(BallEmbed)
 }
 

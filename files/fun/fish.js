@@ -16,23 +16,23 @@ module.exports.run = async (bot, message, args) => {
 
     let fish = ["🐡", "🐟", "🐠", "👢", "🦑", "🦀", "🐚", "🐬", "🐋", "🐳", "🐢"]
     let fishes = {
-      "1": `\`un poisson globe, pourquoi pas ...\` 🐡`,
-      "2": `\`un poisson, à table ! J'ai faim.\` 🐟`,
-      "3": `\`un poisson clown ! Incroyable !\` 🐠`,
-      "4": `\`une botte ... beurk, jette moi ça.\` 👢`,
-      "5": `\`un poulpe, une pieuvre ? Je ne sais pas, mais dans tout les cas c'est une belle prise !\` 🦑`,
-      "6": `\`un crabe, OK. Mais y a mieux ...\` 🦀`,
-      "7": `\`des coquillages. Merci, je vais refaire ma déco.\` 🐚`,
-      "8": `\`un dauphin ? Vraiment ?\` 🐬`,
-      "9": `\`WUT ! Qu'est-ce donc ? Relâche ça.\` 🐋`,
-      "10": `\`Une baleine ! Euh, j'ai une question : Comment as-tu pu ne pas casser ta canne ? \` 🐳`,
-      "11": `\`une tortue ! Relâche la !\` 🐢`
+      "1": i18n.t('fish.F1'),
+      "2": i18n.t('fish.F2'),
+      "3": i18n.t('fish.F3'),
+      "4": i18n.t('fish.F4'),
+      "5": i18n.t('fish.F5')
+      "6": i18n.t('fish.F6'),
+      "7": i18n.t('fish.F7'),
+      "8": i18n.t('fish.F8'),
+      "9": i18n.t('fish.F9'),
+      "10": i18n.t('fish.F10'),
+      "11": i18n.t('fish.F11')
     };
 
     const FishedEmbed = new Discord.RichEmbed()
-    .setTitle("🎣 Relève la canne, vite !")
+    .setTitle(i18n.t('fish.FishEmbed1'))
     .setColor(botconfig.discordblack)
-    .addField("Bravo ! Tu as pêché ...", fishes[Math.floor((Math.random() * fish.length))])
+    .addField(i18n.t('fish.FishEmbed1'), fishes[Math.floor((Math.random() * fish.length))])
     message.channel.send(FishedEmbed)
 }
 

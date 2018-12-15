@@ -4,7 +4,7 @@ const misc = require('../misc.json');
 
 module.exports.run = async (client, message, args) => {
     if(message.author.bot) return;
-    if (message.author.id !== "263713074630885376") return message.reply("__**You are not authorized to use these command ! Only my founder can.**__")
+    if (message.author.id !== "263713074630885376") return message.reply(i18n.t('no-perms.bot-owner'))
   message.delete()
   let f = misc.fleche
 
@@ -31,17 +31,17 @@ module.exports.run = async (client, message, args) => {
     .addField('__**Bonne conduite**__', "```bash\n$1 ~ \"Le spam abusif, les @mentions non-règlementaires ou sujets de conversations peu joyeux sont à éviter (ex: La mort, le suicide...)\"\n$2 ~ \"Les trolls ne sont pas les bienvenus sur le serveur, de même pour les trolls vocaux, comme le fait de troubler une conversation avec des bruitages sortis d'Internet.\"\n$3 ~ \"La publicité n'est pas la bienvenue, qu'elle soit en messages privés comme sur le serveur, n'hésitez pas à demander un partenariat !\"\n$4 ~ \"Merci de respecter les salons mis-à-votre disposition : n'exécutez pas de commande dans le salon 💬-général.\"\n$5 ~ \"Quand vous ne savez pas l'utilité d'un salon, regardez les messages épinglés et la description du salon, si cela ne vous aide pas, écrivez un petit message dans le salon en question demandant une explication.\"\n$6 ~ \"Les conversations privées sont privées ! Parlez-en entre vous en privé.\"```")
     .setFooter(`Page 3`)
     .setColor('#97b8ed')
-    
+
     if(!args[0]) return message.channel.send("Page invalide ! `page1 ; page2 ; page3`").then( async msg => {
         await msg.react('❎')
     });
-    if(args[0] === 'page1') return message.channel.send(Rules1Embed).then( async msg => { 
+    if(args[0] === 'page1') return message.channel.send(Rules1Embed).then( async msg => {
         await msg.react('✅')
     });
-    if(args[0] === 'page2') return message.channel.send(Rules2Embed).then( async msg => { 
+    if(args[0] === 'page2') return message.channel.send(Rules2Embed).then( async msg => {
         await msg.react('✅')
     });
-    if(args[0] === 'page3') return message.channel.send(Rules3Embed).then( async msg => { 
+    if(args[0] === 'page3') return message.channel.send(Rules3Embed).then( async msg => {
         await msg.react('✅')
     });
 }

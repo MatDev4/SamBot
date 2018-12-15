@@ -1,0 +1,69 @@
+{
+  "month" : {
+    "Jan": "janvier",
+    "Febr": "février",
+    "Mar": "mars",
+    "Apr": "avril",
+    "May": "mai",
+    "Ju": "juin",
+    "Jul": "juillet",
+    "Aug": "août",
+    "Sept": "septembre",
+    "Oct": "octobre",
+    "Nov": "novembre",
+    "Dec": "décembre"
+  },
+  "no-perms" : {
+    "bot-owner" : "Vous ne pouvez pas utiliser cette commande, elle est réservée à mon créateur !",
+    "guild-ban" : "Vous n'êtes pas autorisé(e)s à bannir ! *(BAN_MEMBERS)*",
+    "guild-kick" : "Vous n'êtes pas autorisé(e)s à éjecté ! *(KICK_MEMBERS)*"
+  },
+  "8ball" : {
+    "no-args2" : "Que voulez-vous me demander ? *(Il faut indiquer au minimum trois mots)*",
+    "A1" : "Non.",
+    "A2" : "Oui.",
+    "A3": "Possible...",
+    "A4": "Chut ! Je ne oeux pas me concetrer.",
+    "A5": "JAMAIS !",
+    "A6": "Ouiii !",
+    "A7": "Nooooooooon !",
+    "Ask": "${message.author.username} a demandé",
+    "Answer": "Ma boule de cristal m'indique que..."
+  },
+  "ASCII": {
+    "TooManyCharacters": "Merci de ne pas indiquer plus de 12 caractères.",
+    "NoArgs": "Merci d'indiquer ce que vous voulez transformer en format ASCII."
+  },
+  "cash-machine": "La machine à sous a été lancé !",
+  "dice": "🎲 Le dé est tombé sur",
+  "fish": {
+    "FishEmbed1": "🎣 Relève la canne, vite !",
+    "FishEmbed2": "Bravo ! Tu as pêché ...",
+    "F1": "un poisson globe, pourquoi pas ... 🐡",
+    "F2": "un poisson, à table ! J'ai faim. 🐟",
+    "F3": "un poisson clown ! Incroyable ! 🐠",
+    "F4": "une botte ... beurk, jette moi ça. 👢",
+    "F5": "un poulpe, une pieuvre ? Je ne sais pas, mais dans tous les cas c'est une belle prise ! 🦑",
+    "F6": "un crabe, OK. Mais y a mieux ... 🦀",
+    "F7": "des coquillages. Merci, je vais refaire ma déco. 🐚",
+    "F8": "un dauphin ? Vraiment ? 🐬",
+    "F9": "WUT ! Mais c'est un cousin de WUMPUS ! LACHE LE !!!! 🐋",
+    "F10": "Une baleine ! Euh, j'ai une question : Comment as-tu pu ne pas casser ta canne ?  🐳",
+    "F11": "une tortue ! Relâche la ! 🐢",
+  },
+  "rps": {
+    "RPSTitle": "Pierre, feuille, ciseaux",
+    "RPSUserInput": "Tu as choisi ...",
+    "RPSBotInput": "J'ai choisi ...",
+    "Rock": "Pierre ✊",
+    "Paper": "Feuille ✋",
+    "Scissors": "Ciseaux ✌",
+    "RPSTextChoose": "Vas-y, choisis une réaction ! *(S'il n'y en a pas, vérifiez que j'ai bien la permission pour ajouter des réactions).*",
+    "rockr1": "Feuille, j'ai gagné !",
+    "rockr2": "Ciseaux, tu as gagné ...",
+    "paperr1": "Pierre, tu as gagné ...",
+    "paperr2": "Ciseaux, j'ai gagné !",
+    "scissorsr1": "Pierre, j'ai gagné !",
+    "scissorsr2": "Papier, tu as gagné ..."
+  }
+}

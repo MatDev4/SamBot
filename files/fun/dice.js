@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
     let DiceEmbed = new Discord.RichEmbed()
         .setColor(blue)
-        .addField("🎲 Le dé est tombé sur", `\`${replies[result]}\``)
+        .addField(i18n.t('dice'), `\`${replies[result]}\``)
 
     message.channel.send(DiceEmbed)
 }

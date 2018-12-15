@@ -1,9 +1,7 @@
 const Discord = require('discord.js');
-const fs = require("fs");
 let botconfig = require("../botconfig.json");
 let misc = require("../misc.json");
 const client = new Discord.Client({disableEveryone: true});
-const lang = require('i18n');
 //const superagent = require("superagent");
 
 var prefix = (botconfig.prefix)
@@ -14,7 +12,6 @@ module.exports.run = async (bot, message, args) => {
 	if (message.channel.type === "dm") return;
 	if(message.author.bot) return;
 	let uhlol = misc.uhlol
-	let purple = botconfig.purple
 	let blue = botconfig.discordblue
 
 	    var resultats1 = [
@@ -78,11 +75,11 @@ module.exports.run = async (bot, message, args) => {
 
 	    const CashMachineEmbed = new Discord.RichEmbed()
 	    .setColor(blue)
-	    .addField(`La machine à sous a été lancé ! ${uhlol}`, "** **")
+	    .setTitle(i18n.t('cash-machine'))
 	    .addField(`=============`, "** **")
 	    .addField(`| ${reponse1}   |\n \n| ${reponse2}   | **<** \n \n| ${reponse3}    |`, `** **`)
-		.addField(`=============`, "** **")
-    message.channel.send(CashMachineEmbed)
+			.addField(`=============`, "** **")
+    	message.channel.send(CashMachineEmbed)
 
 
 }

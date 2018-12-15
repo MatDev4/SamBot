@@ -1,10 +1,8 @@
 const Discord = require('discord.js');
 const figlet = require('figlet');
 const botconfig = require("./botconfig.json");
-const misc = require("./misc.json")
 const fs = require("fs");
 const client = new Discord.Client({disableEveryone: true});
-const ms = require('ms')
 const ytdl = require('ytdl-core');
 const cmds = client;
 const img = client;
@@ -204,6 +202,27 @@ client.on("message", message => {
   if(eventsfilters) eventsfilters.run(client, message, args);
 });
 /*FS END*/
+/* i18n */
+const i18n = require('i18n');
+
+const locales = ['fr'];
+const defaultLocale = 'fr';
+
+i18n.configure({
+    locales,
+    directory: path.join(__dirname, 'i18n', 'locales'),
+    defaultLocale,
+    objectNotation: true,
+    updateFiles: false,
+    logErrorFn: (msg) => {
+        console.log(msg);
+    },
+    api: {
+      __: 't',
+    },
+  });
+
+i18n.t = i18n.__;
 
 figlet('Figlet On !', function(err, data) {
   if (err) {
@@ -214,10 +233,6 @@ figlet('Figlet On !', function(err, data) {
   console.log('====================================')
   console.log(data)
 });
-
-
-
-
 
 var prefix = (botconfig.prefix)
 
