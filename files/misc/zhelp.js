@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
     .addField(`${ON} | 📸 Images`,cmdh.helpimg, true)
     .addField(`${WIP} | 🛑 Modération`, cmdh.helpmod, true)
     .addField(`${ON} | 🔐 Commandes réservées`, cmdh.helpdev, true)
-    .addField("🎫 Liens", `[Invite-moi](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786) | [Mon support](https://discord.gg/Y8GgT2g) | [Vote sur DBL](https://discord.gg/Y8GgT2g)`)
+    .addField("🎫 Liens", `[Invite-moi](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786)\n[Mon support](https://discord.gg/Y8GgT2g)\n[Vote sur DBL](https://discord.gg/Y8GgT2g)`)
     .addField("🔥 Légendes", `${ON} ${f} Module fonctionnel\n${WIP} ${f} Module en développement, risque de bugs\n${OFF} ${f} Module inutilisable`, true)
 
   message.channel.send(HelpEmbed)
