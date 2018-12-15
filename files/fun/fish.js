@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
       "2": i18n.t('fish.F2'),
       "3": i18n.t('fish.F3'),
       "4": i18n.t('fish.F4'),
-      "5": i18n.t('fish.F5')
+      "5": i18n.t('fish.F5'),
       "6": i18n.t('fish.F6'),
       "7": i18n.t('fish.F7'),
       "8": i18n.t('fish.F8'),
