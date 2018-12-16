@@ -213,7 +213,7 @@ i18n.configure({
     locales,
     directory: path.join(__dirname, 'i18n', 'locales'),
     defaultLocale,
-    objectNotation: true,
+    objectNotation: false,
     updateFiles: false,
     logErrorFn: (msg) => {
         console.log(msg);
