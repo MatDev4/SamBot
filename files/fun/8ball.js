@@ -24,8 +24,8 @@ module.exports.run = async (bot, message, args) => {
     let BallEmbed = new Discord.RichEmbed()
     .setColor(blue)
     .setTitle("🎱 8ball")
-    .addField(`${i18n.t('8ball.Field1')}`, `\`${question}\``, true)
-    .addField("i18n.t('8ball.Field2')", `\`${answer[result]}\``, true)
+    .addField(`${i18n.t('8ball.Ask')}`, `\`${question}\``, true)
+    .addField(i18n.t('8ball.Answer'), `\`${answer[result]}\``, true)
     message.channel.send(BallEmbed)
 }
 
