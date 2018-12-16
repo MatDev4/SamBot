@@ -18,6 +18,7 @@
     "guild-ban" : "Vous n'êtes pas autorisé(e)s à bannir ! *(BAN_MEMBERS)*",
     "guild-kick" : "Vous n'êtes pas autorisé(e)s à éjecté ! *(KICK_MEMBERS)*"
   },
+  "8ball-noargs2" : "Que voulez-vous me demander ? *(Il faut indiquer au minimum trois mots)*",
   "8ball" : {
     "no-args2" : "Que voulez-vous me demander ? *(Il faut indiquer au minimum trois mots)*",
     "A1" : "Non.",
