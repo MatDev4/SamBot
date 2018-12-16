@@ -76,7 +76,7 @@ module.exports.run = async (bot, message, args) => {
 
 	    const CashMachineEmbed = new Discord.RichEmbed()
 	    .setColor(blue)
-	    .setTitle(i18n.t('cash-machine'))
+	    .setTitle(i18n.t('Cash-Machine_Started'))
 	    .addField(`=============`, "** **")
 	    .addField(`| ${reponse1}   |\n \n| ${reponse2}   | **<** \n \n| ${reponse3}    |`, `** **`)
 			.addField(`=============`, "** **")

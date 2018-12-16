@@ -18,8 +18,8 @@ module.exports.run = async (bot, message, args) => {
     let orange = botconfig.orange
     let blue = botconfig.discordblue
 
-      if(args.join(' ').length > 12) return message.channel.send(i18n.t('ASCII.TooManyCharacters'))
-      if (!args.join(' ')) return message.channel.send(i18n.t('ASCII.NoArgs'))
+      if(args.join(' ').length > 12) return message.channel.send(i18n.t('ASCII-TooManyCharacters'))
+      if (!args.join(' ')) return message.channel.send(i18n.t('ASCII-NoArgs'))
         figlet(args.join(' '), (err, data) => {
           message.channel.send('```' + data + '```')
         })

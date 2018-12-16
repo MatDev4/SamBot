@@ -15,34 +15,34 @@ module.exports.run = async (client, message, args) => {
 
     let dark = botconfig.discordblack
 
-    let rockr = [i18n.t('rps.rockr1'), i18n.t('rps.rockr2')]
+    let rockr = [i18n.t('rps-rockr1'), i18n.t('rps-rockr2')]
     let rockc = Math.floor(Math.random() * rockr.length);
 
-    let paperr = [i18n.t('rps.paperr1'), i18n.t('rps.paperr2')]
+    let paperr = [i18n.t('rps-paperr1'), i18n.t('rps-paperr2')]
     let paperc = Math.floor(Math.random() * paperr.length);
 
-    let scissorsr = [i18n.t('rps.scissorsr1'), i18n.t('rps.scissorsr2')]
+    let scissorsr = [i18n.t('rps-scissorsr1'), i18n.t('rps-scissorsr2')]
     let scissorsc = Math.floor(Math.random() * scissorsr.length);
 
     let RockEmbed = new Discord.RichEmbed()
-        .setAuthor(i18n.t('rps.RPSTitle'))
+        .setAuthor(i18n.t('rps-Title'))
         .setColor(dark)
-        .addField(i18n.t('rps.RPSUserInput'), i18n.t('rps.Rock'), true)
-        .addField(i18n.t('rps.RPSBotInput'), rockr[rockc], true)
+        .addField(i18n.t('rps-UserInput'), i18n.t('rps-Rock'), true)
+        .addField(i18n.t('rps-BotInput'), rockr[rockc], true)
 
     let PaperEmbed = new Discord.RichEmbed()
-        .setAuthor(i18n.t('rps.RPSTitle'))
+        .setAuthor(i18n.t('rps-Title'))
         .setColor(dark)
-        .addField(i18n.t('rps.RPSUserInput'), i18n.t('rps.Paper'), true)
-        .addField(i18n.t('rps.RPSBotInput'), paperr[paperc], true)
+        .addField(i18n.t('rps-UserInput'), i18n.t('rps-Paper'), true)
+        .addField(i18n.t('rps-BotInput'), paperr[paperc], true)
 
     let ScissorsEmbed = new Discord.RichEmbed()
-        .setAuthor(i18n.t('rps.RPSTitle'))
+        .setAuthor(i18n.t('rps-Title'))
         .setColor(dark)
-        .addField(i18n.t('rps.RPSUserInput'), i18n.t('rps.Scissors'), true)
-        .addField(i18n.t('rps.RPSBotInput'), scissorsr[scissorsc], true)
+        .addField(i18n.t('rps-UserInput'), i18n.t('rps-Scissors'), true)
+        .addField(i18n.t('rps-BotInput'), scissorsr[scissorsc], true)
 
-    message.channel.send(i18n.t('rps.RPSTextChoose')).then(async msg => {
+    message.channel.send(i18n.t('rps-TextChoose')).then(async msg => {
         await msg.react('✊')
         await msg.react('✋')
         await msg.react('✌')
