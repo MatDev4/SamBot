@@ -5,7 +5,7 @@ const i18n = require('i18n');
 
 module.exports.run = async (client, message, args) => {
     if(message.author.bot) return;
-    if (message.author.id !== "263713074630885376") return message.reply(i18n.t('no-perms.bot-owner'))
+    if (message.author.id !== "263713074630885376") return message.reply(i18n.t('NOP_Botowner'))
   message.delete()
   let f = misc.fleche
 

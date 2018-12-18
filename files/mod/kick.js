@@ -25,22 +25,15 @@ module.exports.run = async (bot, message, args) => {
 
     const SanctionEmbedKick = new Discord.RichEmbed()
     .setTitle('Utilisateur sanctionné')
-    .setDescription("La sanction est un __KICK__ !")
+    .setDescription("La sanction est un kick !")
     .setColor("#ef214e")
     .setTimestamp()
-    .addField("Utilisateur sanctionné :", `Pseudonyme et ID ${f} \`${kUser.user.username}\` *(${kUser.id})*\nSanction effectuée le \`${message.createdAt}\`\nRaison ${f} \`${kReason}\``, true)
-    .addField("Modérateur :", `Pseudonyme et ID ${f} \`${message.author.tag}\` *(${message.author.id})*\nA sanctionné dans \`${message.channel.name}\``, true)
-    .setFooter('Sanction effectuée avec succès !')
-
-    const SanctionnéEmbedKick = new Discord.RichEmbed()
-    .setTitle(`Sanctionné(e)`)
-    .setThumbnail('https://media1.tenor.com/images/1f8c90e5efbd0bbdf0d385ef4f85c9e9/tenor.gif')
-    .setDescription(`Vous avez été sanctionné(e) sur le serveur __${message.guild.name}__`)
-    .addField('KICK', kReason)
-    .setColor("#ef214e")
-    .setTimestamp()
-    .setFooter('Merci de lire le règlement !')
-
+    .addField("🔤 Pseudonyme", bUser.user.tag, true)
+    .addField("🆔 ID", bUser.id, true)
+    .addField("📣 Salon", message.channel.name, true)
+    .addBlankField(false)
+    .addField("🛑 Modérateur", message.author.tag)
+    .addField("🙀 Raison", bReason)
 
     let kickChannel = message.guild.channels.find(`name`, "sam-logs");
     if(!kickChannel) { message.channel.send("N'ayant pas trouvé un salon nommé `sam-logs`, je vous envoie le justificatif ici. N'hésitez pas à créer un salon nommé `sam-logs` !").then(async msg => {
@@ -50,8 +43,6 @@ module.exports.run = async (bot, message, args) => {
     } else {
         kickChannel.send(SanctionEmbedKick)
         }
-        message.client.users.get(kUser.id).send(SanctionnéEmbedKick)
-
     message.guild.member(kUser).kick(kReason);
 };
 

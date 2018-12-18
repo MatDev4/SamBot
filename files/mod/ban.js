@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Vous ne pouvez pas utiliser cette commande !");
 
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!bUser) return message.channel.send("Merci de mentionner un membre sur le serveur !");
+    if(!bUser) return message.channel.send("Merci de d'indiquer un membre sur le serveur ! *(Vous n'êtes pas obligé de le mentionner)");
     let bReason = args.join(" ").slice(22);
     if(!bReason) bReason = `${bUser.user.username} a été banni(e) par ${message.author.tag} sans donner de raison.`
     if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("Je ne peux pas bannir cette personne...");
@@ -28,18 +28,12 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("La sanction est un __BAN__ !")
     .setColor("#ef214e")
     .setTimestamp()
-    .addField("Utilisateur sanctionné :", `Pseudonyme et ID ${f} \`${bUser.user.username}\` *(${bUser.id})*\nSanction effectuée le \`${message.createdAt}\`\nRaison ${f} \`${bReason}\``, true)
-    .addField("Modérateur :", `Pseudonyme et ID ${f} \`${message.author.tag}\` *(${message.author.id})*\nA sanctionné dans \`${message.channel.name}\``, true)
-    .setFooter('Sanction effectuée avec succès !')
-
-    const SanctionnéEmbedBan = new Discord.RichEmbed()
-    .setTitle(`Sanctionné(e)`)
-    .setThumbnail('https://www.tenor.co/ysMW.gif ')
-    .setDescription(`Vous avez été sanctionné(e) sur le serveur __${message.guild.name}__`)
-    .addField('BAN', bReason)
-    .setColor("#ef214e")
-    .setTimestamp()
-    .setFooter('Merci de lire le règlement !')
+    .addField("🔤 Pseudonyme", bUser.user.tag, true)
+    .addField("🆔 ID", bUser.id, true)
+    .addField("📣 Salon", message.channel.name, true)
+    .addBlankField(false)
+    .addField("🛑 Modérateur", message.author.tag)
+    .addField("🙀 Raison", bReason)
 
     let banChannel = message.guild.channels.find(`name`, "sam-logs");
     if(!banChannel) { message.channel.send("N'ayant pas trouvé un salon nommé `sam-logs`, je vous envoie le justificatif ici. N'hésitez pas à créer un salon nommé `sam-logs` !").then(async msg => {
@@ -49,8 +43,6 @@ module.exports.run = async (bot, message, args) => {
     } else {
         banChannel.send(SanctionEmbedBan)
         }
-
-    message.client.users.get(bUser.id).send(SanctionnéEmbedBan)
     message.guild.member(bUser).ban(bReason);
 };
 

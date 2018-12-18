@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send({
         files: [{
           attachment: `${muser.avatarURL}`,
-          name: `${muser.username}-Avatar.png`
+          name: `${muser.user.username}-avatar.png`
         }]
       });
 }

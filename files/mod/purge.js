@@ -14,18 +14,18 @@ module.exports.run = async (bot, message, args) => {
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
     let f = misc.fleche
-    let SamTrash = misc.SamTrash
     let logsChannel = message.guild.channels.find(`name`, "sam-logs");
 
     const PurgeFinishEmbed = new Discord.RichEmbed()
     .setTitle('Purge effectée !')
     .setColor("#ef214e")
-    .addField(`${SamTrash} Informations`, `Salon ${f} \`${message.channel.name}\`\nModérateur ${f} \`${message.author.username}\``, true)
+    .addField("📣 Salon", message.channel.name, true)
+    .addField("🛑 Modérateur", message.author.tag, true)
     .setFooter('Les messages vieux de 14 jours ne peuvent être supprimés, c\'est Discord qui me l\'a dit !')
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Vous n'avez pas la permission `MANAGE_MESSAGES` pour utiliser cette commande.");
 
-    if(args[0].match(/\D/)) return message.channel.send("Merci d'indiquer un nombre uniquement.")
+    if(isNaN(args[0])) return message.channel.send("Merci d'indiquer un nombre uniquement.");
     if (!args[0]) return message.channel.send("Merci d'indiquer un nombre compris en 2 et 100.");
     if (args[0] < 2) return message.channel.send("Merci d'indiquer un nombre compris en 2 et 100.");
     if (args[0] > 100) return message.channel.send("Merci d'indiquer un nombre compris en 2 et 100.");

@@ -4,31 +4,32 @@ const Discord = require("discord.js");
 module.exports = (client, guild, message) => {
     let CreateD = guild.createdAt.toString().split(' ');
     let month = {
-        "1": "janvier",
-        "2": "février",
-        "3": "mars",
-        "4": "avril",
-        "5": "mai",
-        "6": "juin",
-        "7": "juillet",
-        "8": "août",
-        "9": "septembre",
-        "10": "octobre",
-        "11": "novembre",
-        "12": "décembre"
+        "1": "January",
+        "2": "Februar",
+        "3": "March",
+        "4": "April",
+        "5": "May",
+        "6": "June",
+        "7": "Jully",
+        "8": "August",
+        "9": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December"
       }
+
     const guildDeleteEmbed = new Discord.RichEmbed()
     .setColor('#F42440')
-    .setAuthor("Serveur quitté... :/", 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Dialog-error.svg/1024px-Dialog-error.svg.png')
-        .setDescription(`J'ai été enlevée d'un serveur ! Je suis désormais sur __${client.guilds.size}__ serveurs !`)
-        .setThumbnail(guild.iconURL)
-    .addField("🐦 Nom", guild.name, true)
+    .setAuthor("GUILD LEAVE", 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Dialog-error.svg/1024px-Dialog-error.svg.png')
+    .setDescription(`I leaved a guild! I'm now on __${client.guilds.size}__ guilds!`)
+    .setThumbnail(guild.iconURL)
+    .addField("🐦 Name", guild.name, true)
     .addField("🆔 ID", guild.id, true)
-    .addField("👑 Propriétaire", guild.owner.user.tag, true)
-    .addField("📂 Créé le", `${CreateD[2]} ${month[guild.createdAt.getMonth()]} ${CreateD[3]} à ${CreateD[4]}`, true)
-    .addField("👨 Membres", guild.memberCount, true)
+    .addField("👑 Owner", guild.owner.user.tag, true)
+    .addField("📂 Create at", `${CreateD[2]} ${month[guild.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}`, true)
+    .addField("👨 Members", guild.memberCount, true)
     .setTimestamp(new Date())
     client.guilds.get('496373309621927956').channels.get('511240789834334238').send(guildDeleteEmbed).catch((err) => {
-    console.log(`J'ai été enlevée d'un serveur :/ - ${guild.name} | ${guild.id}`);             
-          }); 
+    console.log(`J'ai été enlevée d'un serveur :/ - ${guild.name} | ${guild.id}`);
+          });
 }

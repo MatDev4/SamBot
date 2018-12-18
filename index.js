@@ -203,7 +203,7 @@ client.on("message", message => {
 });
 /*FS END*/
 /* i18n */
-const i18n = require('i18n');
+/*const i18n = require('i18n');
 const path = require('path');
 
 const locales = ['fr'];
@@ -223,8 +223,8 @@ i18n.configure({
     },
   });
 
-i18n.t = i18n.__;
-
+i18n.t = i18n.__;*/
+/* i18n END*/
 figlet('Figlet On !', function(err, data) {
   if (err) {
       console.log('[Figlet] Une erreur est survenue...');

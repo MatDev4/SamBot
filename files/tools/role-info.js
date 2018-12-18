@@ -22,9 +22,6 @@ module.exports.run = async (bot, message, args) => {
 
 
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
-    let firefox = misc.firefox
-    let fleche  = misc.fleche
-    let SamData = misc.SamData
     if (!role) role = message.member.highestRole;
 
     let month = {
