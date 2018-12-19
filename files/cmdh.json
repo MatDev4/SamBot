@@ -1,7 +1,7 @@
 {
     "helpfun": "`8ball ` ; `ascii` ; `cash-machine` ; `dice` ; `fish` ; `rps`",
     "helptools": "`avatar` ; `ping` ; `role-info` ; `server-info` ; `user-info`",
-    "helpmisc": "`google-search` ; `invite` ; `npm-search` ; `youtube-search` ; `help`",
+    "helpmisc": "`google-search` ; `invite` ; `npm-search` ; `help`",
     "helpimg": "`arc` ; `cat` ; `dog`",
     "helpmod": "`ban` ; `kick` ; `poll` ; `purge`",
 
