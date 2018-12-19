@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(discordblack)
     .setFooter("SamBot | <>: Required fields [<>]: Optionnal field")
     .setTitle("Documentation")
-    .setDescription(`Welcome on the SamBot's documention\n Mon prefix is actually __**${botconfig.prefix}**__\n${ON} ${f} Functional unit ${WIP} ${f} Unit under development, risk of bugs${OFF} ${f} Unusable unit`)
+    .setDescription(`Welcome on the SamBot's documention\n My prefix is actually __**${botconfig.prefix}**__\n${ON} ${f} Functional unit ${WIP} ${f} Unit under development, risk of bugs${OFF} ${f} Unusable unit`)
     .addField(`${ON} | 🍪 Fun`, cmdh.helpfun, true)
     .addField(`${ON} | 🔨 Tools`, cmdh.helptools, true)
     .addField(`${ON} | 🎭 Miscellaneous`, cmdh.helpmisc, true)
