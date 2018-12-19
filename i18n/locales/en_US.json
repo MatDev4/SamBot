@@ -79,7 +79,7 @@
 
   "help-EmbedFooter": "SamBot | <>: Required fields [<>]: Optionnal field",
   "help-EmbedTitle": "Documentation",
-  "help-EmbedDesc": "Welcome on the SamBot's documention\n Mon prefix is actually __**${botconfig.prefix}**__\n${ON} ${f} Functional unit ${WIP} ${f} Unit under development, risk of bugs${OFF} ${f} Unusable unit",
+  "help-EmbedDesc": "Welcome on the SamBot's documention\n My prefix is actually __**${botconfig.prefix}**__\n${ON} ${f} Functional unit ${WIP} ${f} Unit under development, risk of bugs${OFF} ${f} Unusable unit",
   "help-EmbedField_Link_Title": "🎫 Links",
   "help-EmbedField_Link_Desc": "[Invite me](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786) | My support server](https://discord.gg/Y8GgT2g) | [Discord Bots](https://discord.gg/Y8GgT2g)",
   "help-EmbedField_Fun": "🍪 Fun",
