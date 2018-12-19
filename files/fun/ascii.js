@@ -18,8 +18,8 @@ module.exports.run = async (bot, message, args) => {
     let orange = botconfig.orange
     let blue = botconfig.discordblue
 
-      if(args.join(' ').length > 12) return message.channel.send(i18n.t('ASCII-TooManyCharacters'))
-      if (!args.join(' ')) return message.channel.send(i18n.t('ASCII-NoArgs'))
+      if(args.join(' ').length > 12) return message.channel.send("Please do not enter more than 12 characters.")
+      if (!args.join(' ')) return message.channel.send("Please indicate what you want to transform into ASCII format.")
         figlet(args.join(' '), (err, data) => {
           message.channel.send('```' + data + '```')
         })

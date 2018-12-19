@@ -28,43 +28,43 @@ module.exports.run = async (bot, message, args) => {
     let DiB = misc.DiscordBot
 
     let UpBot = {
-        "true": `BIP. BOUP. Un Bot.`,
-        "false": `Non, c'est un humain.`
+        "true": `BIP. BOUP ! It's a Bot.`,
+        "false": `BIP. BOUP... It's not a Bot.`
     }
 
     let RichStatus = {
-        "online": `${DiO} Connecté(e)`,
-        "idle": `${DiI} Occupé(e)`,
-        "dnd": `${DiD} Ne pas déranger`,
-        "offline": `${DiOf} Déconnecté(e) ou invisible`,
+        "online": `${DiO} Online`,
+        "idle": `${DiI} Idle`,
+        "dnd": `${DiD} Do not Disturb (DnD)`,
+        "offline": `${DiOf} Invisible or offline`,
         "streaming": `${DiS} Streaming`
     }
 
     let month = {
-        "Jan": "janvier",
-        "Feb": "février",
-        "Mar": "mars",
-        "Apr": "avril",
-        "May": "mai",
-        "Jun": "juin",
-        "Jul": "juillet",
-        "Aug": "août",
-        "Sep": "septembre",
-        "Oct": "octobre",
-        "Nov": "novembre",
-        "Dec": "décembre"
-    }
+        "1": "Januar",
+        "2": "Februar",
+        "3": "March",
+        "4": "April",
+        "5": "May",
+        "6": "June",
+        "7": "July",
+        "8": "August",
+        "9": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December"
+      }
 
     const UserInfoEmbed = new Discord.RichEmbed()
     .setTitle(muser.tag)
     .setColor(botconfig.discordblack)
     .setThumbnail(muser.avatarURL)
-    .addField("🃏 Pseudonyme", muser.tag, true)
+    .addField("🃏 Username", muser.tag, true)
     .addField("🆔 ID", muser.id, true)
-    .addField("👻 Statut", RichStatus[muser.presence.status], true)
-    .addField("🎮 Activité", muser.presence.game ? muser.presence.game.name : 'Ne fais rien...', true)
+    .addField("👻 Status", RichStatus[muser.presence.status], true)
+    .addField("🎮 Activity", muser.presence.game ? muser.presence.game.name : 'Noting...', true)
     .addField(`${DiB} Bot`, UpBot[muser.bot], true)
-    .addField("💿 Compte créé le", muser.createdAt.toString().split(' ')[2] + ' ' + month[muser.createdAt.toString().split(' ')[1]] + ' ' + muser.createdAt.toString().split(' ')[3] + ' ' + muser.createdAt.toString().split(' ')[4], true)
+    .addField("💿 Account created on", muser.createdAt.toString().split(' ')[2] + ' ' + month[muser.createdAt.toString().split(' ')[1]] + ' ' + muser.createdAt.toString().split(' ')[3] + 'at' + muser.createdAt.toString().split(' ')[4], true)
 
     message.channel.send(UserInfoEmbed)
 

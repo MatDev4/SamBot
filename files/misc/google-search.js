@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
           .setDescription(link.description)
           .setURL(link.href)
           .setColor(botconfig.discordblack)
-          .setFooter("Clique sur le texte bleu pour accéder au site")
+          .setFooter("Click on the blue text to access the site")
 
           message.channel.send(GoogleEmbed);
       }

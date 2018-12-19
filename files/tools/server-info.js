@@ -36,56 +36,56 @@ let DiscordStream = misc.DiscordStream
 let server = message.guild;
 let f = fleche;
 let region = {
-  "brazil": `\`Brésil\` :flag_br:`,
-  "eu-central": `\`Europe Centrale\` :flag_eu:`,
-  "singapore": `\`Singapour\` :flag_sg:`,
-  "us-central": `\`Centre des Etats-Unis\` :flag_us:`,
-  "sydney": `\`Sydney\` :flag_au:`,
-  "us-east": `\`Est des Etats-Unis\` :flag_us:`,
-  "us-south": `\`Sud des Etats-Unis\` :flag_us:`,
-  "us-west": `\`Ouest des Etats-Unis\` :flag_us:`,
-  "eu-west": `\`Europe occidentale (Ouest)\` :flag_eu:`,
-  "vip-us-east": `🌟 \`Localisation VIP\` 🌟`,
-  "london": `\`Londres\` :flag_gb:`,
-  "amsterdam": `\`Amsterdam\` :flag_nl:`,
-  "hongkong": `\`Hong Kong\` :flag_hk:`,
-  "russia": `\`Russie\` :flag_ru:`,
-  "southafrica": `\`Afrique du Sud\` :flag_za:`
+  "brazil": `Brazil :flag_br:`,
+  "eu-central": `Central Europe :flag_eu:`,
+  "singapore": `Singapor :flag_sg:`,
+  "us-central": `Central United States :flag_us:`,
+  "sydney": `Sydney :flag_au:`,
+  "us-east": `Eastern United States :flag_us:`,
+  "us-south": `Southern United States :flag_us:`,
+  "us-west": `Western United States :flag_us:`,
+  "eu-west": `Western Europe :flag_eu:`,
+  "vip-us-east": `🌟 VIP Region 🌟`,
+  "london": `London :flag_gb:`,
+  "amsterdam": `Amsterdam :flag_nl:`,
+  "hongkong": `Hong Kong :flag_hk:`,
+  "russia": `Russia :flag_ru:`,
+  "southafrica": `Southern Africa :flag_za:`
 }
 let month = {
-  "1": "janvier",
-  "2": "février",
-  "3": "mars",
-  "4": "avril",
-  "5": "mai",
-  "6": "juin",
-  "7": "juillet",
-  "8": "août",
-  "9": "septembre",
-  "10": "octobre",
-  "11": "novembre",
-  "12": "décembre"
-}
+    "1": "Januar",
+    "2": "Februar",
+    "3": "March",
+    "4": "April",
+    "5": "May",
+    "6": "June",
+    "7": "July",
+    "8": "August",
+    "9": "September",
+    "10": "October",
+    "11": "November",
+    "12": "December"
+  }
 let AFKchan;
 let AFKtimeout;
 if(message.guild.afkChannelID !== null) {
     AFKchan = `#${bot.channels.get(message.guild.afkChannelID).name}`
     AFKtimeout = `${message.guild.afkTimeout / 60} minutes`
 } else {
-    AFKchan = "Le salon d'AFK n'a pas été défini."
-    AFKtimeout = "L'AFK n'est pas activé sur le serveur."
+    AFKchan = "The AFK lounge is not defined"
+    AFKtimeout = "AFK is not activated on the server."
 }
 const explicitcontentLevels = [
-  `**Ne pas analyser de messages.** ${f} Aucune fête n'égale les goûters de ma mamie.`,
-  `**Analyse les messages des membres sans rôle.** ${f} Option recommandée pour les serveurs utilisant des rôles pour les membres de confiance.`,
-  `**Analyse les messages envoyés par tous les membres.** ${f} Option recommandée lorsque vous voulez un nettoyage brillant.`
+  `**Don't scan any messages.** ${f} Ain't no party like my grandma's tea party.`,
+  `**Scan messages from members without role.** ${f} Recommended option for servers that use roles for trusted membership.`,
+  `**Scan messages sent by all members.** ${f} Recommended option for when you want that squeakly clean shine.`
 ]
 const verificationLevels = [
-  `**Aucun** ${f} Aucune restriction`,
-  `**Faible** ${f} Doit avoir un Email vérifié sur son compte Discord.`,
-  `**Moyen** ${f} Doit aussi être inscrit sur Discord depuis plus de 5 minutes.`,
-  `**(╯°□°）╯︵ ┻━┻** ${f} Doit aussi être un membre de ce serveur depuis plus de 10 minutes.`,
-  `**┻━┻ ﾐヽ(ಠ益ಠ)ノ彡┻━┻** ${f} Doit avoir un téléphone vérifié sur son compte Discord.`
+  `**None** ${f} Unrestricted.`,
+  `**Low** ${f} Must have a verified email on their Discord account.`,
+  `**Medium** ${f} Must also be registered on Discord for longer than 5 minutes.`,
+  `**(╯°□°）╯︵ ┻━┻** ${f} Must also be a member of this server for longer than 10 minutes.`,
+  `**┻━┻ ﾐヽ(ಠ益ಠ)ノ彡┻━┻** ${f} Must have a verified phone on their Discord account.`
 ]
 
 let blue = botconfig.discordblue
@@ -99,19 +99,19 @@ let JoinD = message.member.joinedAt.toString().split(' ');
   .setTitle(server.name)
   .setColor(blue)
   .setThumbnail(server.iconURL)
-  .addField("🐦 Nom du serveur", server.name, true)
+  .addField("🐦 Guild name", server.name, true)
   .addField("🆔 ID", server.id, true)
-  .addField("🌐 Localisation", region[server.region], true)
-  .addField("👑 Propriétaire", server.owner, true)
-  .addField("📂 Créé le",`${CreateD[2]} ${month[server.createdAt.getMonth()]} ${CreateD[3]} à ${CreateD[4]}`, true)
-  .addField("🚪 Vous avez rejoint le", `${JoinD[2]} ${month[server.joinedAt.getMonth()]} ${JoinD[3]} à ${JoinD[4]}`, true)
-  .addField(`📣 (${server.channels.size}) Salons et catégories`, `Salons textuels ${fleche} ${textc}\nSalons vocaux ${fleche} ${voicec}\nCatégories ${fleche} ${categoryc}`, true)
-  .addField(`🎢 (${message.guild.roles.size}) Rôles`, "Désolé, je ne peux pas afficher les rôles.", true)
-  .addField(`😜 (${message.guild.emojis.size}) Emojis`, "Désolé, je ne peux pas afficher les émojis.", true)
-  .addField(`👨 ${mcount} Membres`, `${DiscordHuman} Humains ${fleche} ${mhuman}\n${DiscordBot} Bots ${fleche} ${mbot}\n${DiscordOnline} Connectés ${fleche} ${monline}\n${DiscordIdle} Inactifs ${fleche} ${midle}\n${DiscordDnD} Ne pas déranger ${fleche} ${mdnd}\n${DiscordOffline} Invisibles ou déconnectés ${fleche} ${moffline}\n ${DiscordStream} Streamers ${fleche} ${mstreaming}`)
+  .addField("🌐 Region", region[server.region], true)
+  .addField("👑 Owner", server.owner, true)
+  .addField("📂 Created on",`${CreateD[2]} ${month[server.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}`, true)
+  .addField("🚪 You have joined at", `${JoinD[2]} ${month[server.joinedAt.getMonth()]} ${JoinD[3]} at ${JoinD[4]}`, true)
+  .addField(`📣 (${server.channels.size}) Channels and categories`, `Textual lounges ${fleche} ${textc}\nVoice lounges ${fleche} ${voicec}\nCategories ${fleche} ${categoryc}`, true)
+  .addField(`🎢 (${message.guild.roles.size}) Roles`, "Sorry, I can't display roles.", true)
+  .addField(`😜 (${message.guild.emojis.size}) Emojis`, "Sorry, I can't display emotes.", true)
+  .addField(`👨 ${mcount} Members`, `${DiscordHuman} Humans ${fleche} ${mhuman}\n${DiscordBot} Bots ${fleche} ${mbot}\n${DiscordOnline} Onlines ${fleche} ${monline}\n${DiscordIdle} Idle ${fleche} ${midle}\n${DiscordDnD} Do not Disturb (DnD) ${fleche} ${mdnd}\n${DiscordOffline}  ${fleche} ${moffline} Invisible or offline\n ${DiscordStream} Streamers ${fleche} ${mstreaming}`, true)
   .addBlankField(false)
-  .addField("😴 AFK", `Salon d'AFK ${fleche} ${AFKchan}\nDélai d'AFK ${fleche} ${AFKtimeout}`, true)
-  .addField("🔐 Modération", `Niveau de vérification ${verificationLevels[message.guild.verificationLevel]}\nAnalyse des messages ${explicitcontentLevels[message.guild.explicitContentFilter]}`, true)
+  .addField("😴 AFK Parameters", `AFK channel ${fleche} ${AFKchan}\nAFK Timeout ${fleche} ${AFKtimeout}`, true)
+  .addField("🔐 Modération parameters", `Verification level ${verificationLevels[message.guild.verificationLevel]}\nExplicit content level ${explicitcontentLevels[message.guild.explicitContentFilter]}`, true)
   message.channel.send(ServerInfoEmbed);
 }
 

@@ -15,34 +15,34 @@ module.exports.run = async (client, message, args) => {
 
     let dark = botconfig.discordblack
 
-    let rockr = [i18n.t('rps-rockr1'), i18n.t('rps-rockr2')]
+    let rockr = ["Paper, I won!", "Scissors, you won..."]
     let rockc = Math.floor(Math.random() * rockr.length);
 
-    let paperr = [i18n.t('rps-paperr1'), i18n.t('rps-paperr2')]
+    let paperr = ["Rock, you won...", "Scissors, I won!"]
     let paperc = Math.floor(Math.random() * paperr.length);
 
-    let scissorsr = [i18n.t('rps-scissorsr1'), i18n.t('rps-scissorsr2')]
+    let scissorsr = ["Rock, I won!", "Paper, you won..."]
     let scissorsc = Math.floor(Math.random() * scissorsr.length);
 
     let RockEmbed = new Discord.RichEmbed()
-        .setAuthor(i18n.t('rps-Title'))
+        .setAuthor("Rock, paper, Scissors")
         .setColor(dark)
-        .addField(i18n.t('rps-UserInput'), i18n.t('rps-Rock'), true)
-        .addField(i18n.t('rps-BotInput'), rockr[rockc], true)
+        .addField("You choosed...", "Rock ✊", true)
+        .addField("I choosed...", rockr[rockc], true)
 
     let PaperEmbed = new Discord.RichEmbed()
-        .setAuthor(i18n.t('rps-Title'))
+        .setAuthor("Rock, paper, Scissors")
         .setColor(dark)
-        .addField(i18n.t('rps-UserInput'), i18n.t('rps-Paper'), true)
-        .addField(i18n.t('rps-BotInput'), paperr[paperc], true)
+        .addField("You choosed...", "Paper ✋", true)
+        .addField("I choosed...", paperr[paperc], true)
 
     let ScissorsEmbed = new Discord.RichEmbed()
-        .setAuthor(i18n.t('rps-Title'))
+        .setAuthor("Rock, paper, Scissors")
         .setColor(dark)
-        .addField(i18n.t('rps-UserInput'), i18n.t('rps-Scissors'), true)
-        .addField(i18n.t('rps-BotInput'), scissorsr[scissorsc], true)
+        .addField("You choosed...", "Scissors ✌", true)
+        .addField("I choosed...", scissorsr[scissorsc], true)
 
-    message.channel.send(i18n.t('rps-TextChoose')).then(async msg => {
+    message.channel.send("Go ahead, choose a reaction! *(If there are none, make sure I have permission to add reactions).").then(async msg => {
         await msg.react('✊')
         await msg.react('✋')
         await msg.react('✌')

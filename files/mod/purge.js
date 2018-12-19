@@ -17,23 +17,24 @@ module.exports.run = async (bot, message, args) => {
     let logsChannel = message.guild.channels.find(`name`, "sam-logs");
 
     const PurgeFinishEmbed = new Discord.RichEmbed()
-    .setTitle('Purge effectée !')
-    .setColor("#ef214e")
-    .addField("📣 Salon", message.channel.name, true)
-    .addField("🛑 Modérateur", message.author.tag, true)
-    .setFooter('Les messages vieux de 14 jours ne peuvent être supprimés, c\'est Discord qui me l\'a dit !')
+    .setTitle('- PURGE -')
+    .setColor(botconfig.purgecolor)
+    .addField("📣 Channel", message.channel.name, true)
+    .addField("🛑 Moderateur", message.author.tag, true)
+    .setFooter('Messages that are 14 days old cannot be deleted, Discord told me so!')
 
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Vous n'avez pas la permission `MANAGE_MESSAGES` pour utiliser cette commande.");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You are not allowed to use these command! *(MANAGE_MESSAGE)*");
 
-    if(isNaN(args[0])) return message.channel.send("Merci d'indiquer un nombre uniquement.");
-    if (!args[0]) return message.channel.send("Merci d'indiquer un nombre compris en 2 et 100.");
-    if (args[0] < 2) return message.channel.send("Merci d'indiquer un nombre compris en 2 et 100.");
-    if (args[0] > 100) return message.channel.send("Merci d'indiquer un nombre compris en 2 et 100.");
+    if(isNaN(args[0])) return message.channel.send("Please indicate a number only.");
+    if (!args[0]) return message.channel.send("Please indicate a number between 2 and 100.");
+    if (args[0] < 2) return message.channel.send("Please indicate a number between 2 and 100.");
+    if (args[0] > 100) return message.channel.send("Please indicate a number between 2 and 100.");
 
     message.delete()
     message.channel.bulkDelete(args[0])
 
-    if(!logsChannel) { message.channel.send("N'ayant pas trouvé un salon nommé `sam-logs`, je vous envoie le justificatif ici. N'hésitez pas à créer un salon nommé `sam-logs` !").then(async msg => {
+
+    if(!logsChannel) { message.channel.send("Having not found a salon named `sam-logs`, I send you the proof here. Feel free to create a lounge called `sam-logs`!").then(async msg => {
         await msg.react('498522777523847168')
         await message.channel.send(PurgeFinishEmbed)
     })

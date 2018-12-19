@@ -15,28 +15,28 @@ module.exports.run = async (bot, message, args) => {
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
 
-    if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Vous ne pouvez pas utiliser cette commande !");
+    if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("You are not allowed to kick! *(KICK_MEMBERS)*");
 
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!kUser) return message.channel.send("Merci de mentionner un membre sur le serveur !");
+    if(!kUser) return message.channel.send("Please indicate the user to be kicked! *(You don't have to mention it).*");
     let kReason = args.join(" ").slice(22);
-    if(!kReason) kReason = `${kUser.user.username} a été éjecté(e) par ${message.author.tag} sans donner de raison.`
+    if(!kReason) kReason = `${kUser.user.tag} has been kicked by ${message.author.tag} without giving a reason.`
     if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Je ne peux pas kick cette personne...");
 
     const SanctionEmbedKick = new Discord.RichEmbed()
-    .setTitle('Utilisateur sanctionné')
-    .setDescription("La sanction est un kick !")
-    .setColor("#ef214e")
+    .setTitle('- KICK -')
+    .setDescription("A member has been kicked!")
+    .setColor(botconfig.kickcolor)
     .setTimestamp()
-    .addField("🔤 Pseudonyme", bUser.user.tag, true)
-    .addField("🆔 ID", bUser.id, true)
-    .addField("📣 Salon", message.channel.name, true)
+    .addField("🔤 Username", bUser.user.tag, true)
+    .addField("🆔 ID", kUser.id, true)
+    .addField("📣 Channel", message.channel.name, true)
     .addBlankField(false)
-    .addField("🛑 Modérateur", message.author.tag)
-    .addField("🙀 Raison", bReason)
+    .addField("🛑 Moderateur", message.author.tag)
+    .addField("🙀 Reason", kReason)
 
     let kickChannel = message.guild.channels.find(`name`, "sam-logs");
-    if(!kickChannel) { message.channel.send("N'ayant pas trouvé un salon nommé `sam-logs`, je vous envoie le justificatif ici. N'hésitez pas à créer un salon nommé `sam-logs` !").then(async msg => {
+    if(!kickChannel) { message.channel.send("Having not found a salon named `sam-logs`, I send you the proof here. Feel free to create a lounge called `sam-logs`!").then(async msg => {
         await msg.react('498522777523847168')
         await message.channel.send(SanctionEmbedKick)
     })

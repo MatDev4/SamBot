@@ -18,9 +18,9 @@ module.exports.run = async (bot, message, args) => {
     let blue = botconfig.discordblue
 
     const InviteEmbed = new Discord.RichEmbed()
-    .setTitle("Inviter SamBot")
+    .setTitle("Invite SamBot")
     .setColor(blue)
-    .addField("Cliquez sur les liens ci-dessous", `[SamBot](${botconfig.invitelink})\n[SamBot, sans permission](${botconfig.noperminvitelink})`)
+    .addField("Click on the link below", `[SamBot](${botconfig.invitelink})`)
   message.channel.send(InviteEmbed)
 }
 

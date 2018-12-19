@@ -16,8 +16,8 @@ module.exports.run = async (bot, message, args) => {
     if(message.author.bot) return;
 
     let tf = {
-        "true": `\`Oui\``,
-        "false": `\`Non\``
+        "true": `\`Yes !\``,
+        "false": `\`No !\``
       };
 
 
@@ -25,32 +25,32 @@ module.exports.run = async (bot, message, args) => {
     if (!role) role = message.member.highestRole;
 
     let month = {
-        "1": "janvier",
-        "2": "février",
-        "3": "mars",
-        "4": "avril",
-        "5": "mai",
-        "6": "juin",
-        "7": "juillet",
-        "8": "août",
-        "9": "septembre",
-        "10": "octobre",
-        "11": "novembre",
-        "12": "décembre"
+        "1": "Januar",
+        "2": "Februar",
+        "3": "March",
+        "4": "April",
+        "5": "May",
+        "6": "June",
+        "7": "July",
+        "8": "August",
+        "9": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December"
       }
       let CreateD = role.createdAt.toString().split(' ');
 
     const RoleInfoEmbed = new Discord.RichEmbed()
     .setColor(role.hexColor)
     .setTitle(role.name)
-    .addField("🔤 Nom", role.name, true)
+    .addField("🔤 Name", role.name, true)
     .addField("🆔 ID", role.id, true)
-    .addField("#⃣ Couleur", role.hexColor, true)
-    .addField("💳 Rôle créé le", `${CreateD[2]} ${month[role.createdAt.getMonth()]} ${CreateD[3]} à ${CreateD[4]}`, true)
-    .addField("👥 Porté par", `${role.members.size} personne(s)`, true)
+    .addField("#⃣ Color", role.hexColor, true)
+    .addField("💳 Role created on", `${CreateD[2]} ${month[role.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}`, true)
+    .addField("👥 Carried by", `${role.members.size} person/people`, true)
     .addBlankField(false)
-    .addField("🔐 Rôle modifiable", tf[role.editable.toString()], true)
-    .addField("🔏 Rôle d'un Bot",tf[role.managed.toString()], true)
+    .addField("🔐 Editable role", tf[role.editable.toString()], true)
+    .addField("🔏 Bot role",tf[role.managed.toString()], true)
     message.channel.send(RoleInfoEmbed)
 
 }
