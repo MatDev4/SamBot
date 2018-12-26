@@ -55,7 +55,7 @@ module.exports.run = async (bot, message, args) => {
         "11": "November",
         "12": "December"
       }
-let CreateD = message.guild.createdAt.toString().split(' ');
+let CreateD = muser.createdAt.toString().split(' ');
 
     const UserInfoEmbed = new Discord.RichEmbed()
     .setTitle(muser.tag)
@@ -66,7 +66,7 @@ let CreateD = message.guild.createdAt.toString().split(' ');
     .addField("👻 Status", RichStatus[muser.presence.status], true)
     .addField("🎮 Activity", muser.presence.game ? muser.presence.game.name : 'Nothing...', true)
     .addField(`${DiB} Bot`, UpBot[muser.bot], true)
-    .addField("💿 Account created on", `${CreateD[2]} ${month[server.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}`, true)
+    .addField("💿 Account created on", `${CreateD[2]} ${month[muser.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}`, true)
 
     message.channel.send(UserInfoEmbed)
 
