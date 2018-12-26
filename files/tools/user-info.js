@@ -17,7 +17,8 @@ module.exports.run = async (bot, message, args) => {
     if (message.content.indexOf(prefix) !== 0) return;
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
-    let muser = message.mentions.users.first() || message.author;
+    let muser = message.mentions.users.first() || message.author || message.guild.members.get(args[0]);
+    if(!muser) muser = message.author;
 
 
     let DiO = misc.DiscordOnline
@@ -54,6 +55,7 @@ module.exports.run = async (bot, message, args) => {
         "11": "November",
         "12": "December"
       }
+let CreateD = message.guild.createdAt.toString().split(' ');
 
     const UserInfoEmbed = new Discord.RichEmbed()
     .setTitle(muser.tag)
@@ -62,9 +64,9 @@ module.exports.run = async (bot, message, args) => {
     .addField("🃏 Username", muser.tag, true)
     .addField("🆔 ID", muser.id, true)
     .addField("👻 Status", RichStatus[muser.presence.status], true)
-    .addField("🎮 Activity", muser.presence.game ? muser.presence.game.name : 'Noting...', true)
+    .addField("🎮 Activity", muser.presence.game ? muser.presence.game.name : 'Nothing...', true)
     .addField(`${DiB} Bot`, UpBot[muser.bot], true)
-    .addField("💿 Account created on", muser.createdAt.toString().split(' ')[2] + ' ' + month[muser.createdAt.toString().split(' ')[1]] + ' ' + muser.createdAt.toString().split(' ')[3] + 'at' + muser.createdAt.toString().split(' ')[4], true)
+    .addField("💿 Account created on", `${CreateD[2]} ${month[server.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}`, true)
 
     message.channel.send(UserInfoEmbed)
 
