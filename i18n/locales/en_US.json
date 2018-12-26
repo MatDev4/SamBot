@@ -1,4 +1,9 @@
 {
+  "Client_NoPerm_guildBan": "**Hum... I'm sorry, but I can't ban if I don't have the required permission! *(Ban members)***",
+  "Client_NoPerm_guildKick": "**Hum.... I'm sorry, but I can't eject if I don't have the required permission! *(Kick members)***",
+  "Client_NoPerm_guildMessageEmbed": "**Hum... I'm sorry, but I can't do anything without the required permissions! *(Embed links, Attach files...)***",
+  "Client_NoPerm_guildManageMessage": "**Hum... I'm sorry, but I can't delete messages without permission! *(Manage messages)***",
+
   "Jan": "Januar",
   "Febr": "Februar",
   "Mar": "March",
@@ -102,7 +107,7 @@
 
   "kick-NoUserMessage": "Please indicate the user to be kicked! *(You don't have to mention it).*",
   "kick-defaultReason": "${bUser.user.tag} has been kicked by ${message.author.tag} without giving a reason.",
-  "kick-UserBypassMessage": "Je suis désolée mais je ne peux pas éjecter un modérateur !",
+  "kick-UserBypassMessage": "I'm sorry but I can't kick a moderator!",
   "kick-EmbedTitle": "- KICK -",
   "kick-EmbedDesc": "A member has been kicked!",
   "kick-EmbedField_Username": "🔤 Username",
@@ -187,7 +192,7 @@
   "userinfo-EmbedField_Activity": "🎮 Activity",
   "userinfo-EmbedField_Bot": "${DiB} Bot",
   "userinfo-EmbedField_AccountCreatedDate_Title": "💿 Account created on",
-  "userinfo-EmbedField_AccountCreatedDeate_Desc": "muser.createdAt.toString().split(' ')[2] + ' ' + month[muser.createdAt.toString().split(' ')[1]] + ' ' + muser.createdAt.toString().split(' ')[3] + 'at ' + muser.createdAt.toString().split(' ')[4]",
+  "userinfo-EmbedField_AccountCreatedDeate_Desc": "${CreateD[2]} ${month[server.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}",
   "userinfo-IsBot_True": "BIP. BOUP ! It's a Bot.",
   "userinfo-IsBot_False": "BIP. BOUP... It's not a Bot.",
   "userinfo-Status_Nothing": "Nothing...",

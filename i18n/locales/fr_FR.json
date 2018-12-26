@@ -1,4 +1,9 @@
 {
+  "Client_NoPerm_guildBan": "**Hum... Je suis désolée mais je ne peux pas bannir si je n'ai pas la permission requise ! *(Bannir des membres)***",
+  "Client_NoPerm_guildKick": "**Hum... Je suis désolée mais je ne peux pas éjecter si je n'ai pas la permission requise ! *(Ejecter des membres)***",
+  "Client_NoPerm_guildMessageEmbed": "**Hum... Je suis désolée mais je ne peux rien faire sans avoir les permissions requises ! *(Envoyer des liens, Attacher des fichiers)***",
+  "Client_NoPerm_guildManageMessage": "**Hum... Je suis désolée mais je ne peux pas supprimer des messages sans en avoir la permission ! *(Gérer les messages)***",
+
   "Jan": "janvier",
   "Febr": "février",
   "Mar": "mars",
@@ -187,7 +192,7 @@
   "userinfo-EmbedField_Activity": "🎮 Activité",
   "userinfo-EmbedField_Bot": "${DiB} Bot",
   "userinfo-EmbedField_AccountCreatedDate_Title": "💿 Compte créé le",
-  "userinfo-EmbedField_AccountCreatedDeate_Desc": "muser.createdAt.toString().split(' ')[2] + ' ' + month[muser.createdAt.toString().split(' ')[1]] + ' ' + muser.createdAt.toString().split(' ')[3] + ' ' + muser.createdAt.toString().split(' ')[4]",
+  "userinfo-EmbedField_AccountCreatedDeate_Desc": "${CreateD[2]} ${month[server.createdAt.getMonth()]} ${CreateD[3]} at ${CreateD[4]}",
   "userinfo-IsBot_True": "BIP. BOUP ! C'est un robot.",
   "userinfo-IsBot_False": "BIP. BOUP... Ce n'est pas un robot.",
   "userinfo-Status_Nothing": "Ne fais rien...",
