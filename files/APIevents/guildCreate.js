@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
-
+const DBLAPI = require("dblapi.js");
+const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
 
 module.exports = (client, guild, message) => {
     let CreateD = guild.createdAt.toString().split(' ');
@@ -35,4 +36,5 @@ module.exports = (client, guild, message) => {
     console.log(`Added on ${guild.name} | ${guild.id}`)
     client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `🎸 Guilds: ${client.guilds.size}`})
     client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `👥 Users: ${client.users.size}`})
+    dbl.postStats(client.guilds.size)
 }

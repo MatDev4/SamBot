@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const DBLAPI = require("dblapi.js");
+const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
 
 
 module.exports = (client) => {
@@ -12,4 +14,12 @@ module.exports = (client) => {
     }, 7000);
     client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `🎸 Guilds: ${client.guilds.size}`})
     client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `👥 Users: ${client.users.size}`})
+
+  dbl.on('posted', () => {
+  console.log('[DBL API] Updated guild counter');
+  })
+
+  dbl.on('error', e => {
+ console.log(`[DBL API] An error occured >> ${e}`);
+  })
 }
