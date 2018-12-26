@@ -42,8 +42,8 @@ module.exports.run = async (bot, message, args) => {
     }
 
     let month = {
-        "1": "Januar",
-        "2": "Februar",
+        "1": "January",
+        "2": "February",
         "3": "March",
         "4": "April",
         "5": "May",

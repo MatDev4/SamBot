@@ -5,7 +5,7 @@ module.exports = (client, guild, message) => {
     let CreateD = guild.createdAt.toString().split(' ');
     let month = {
         "1": "January",
-        "2": "Februar",
+        "2": "February",
         "3": "March",
         "4": "April",
         "5": "May",

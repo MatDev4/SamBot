@@ -10,6 +10,6 @@ module.exports = (client) => {
     let STATUSCHOOSER = Math.floor(Math.random()*(RANDOMCHOOSER.length));
         client.user.setActivity(RANDOMCHOOSER[STATUSCHOOSER]);
     }, 7000);
-    client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `Guilds: ${client.guilds.size}`})
-    client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `Users: ${client.users.size}`})
+    client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `🎸 Guilds: ${client.guilds.size}`})
+    client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `👥 Users: ${client.users.size}`})
 }
