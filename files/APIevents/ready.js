@@ -15,11 +15,11 @@ module.exports = (client) => {
     client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `🎸 Guilds: ${client.guilds.size}`})
     client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `👥 Users: ${client.users.size}`})
 
-  dbl.on('posted', () => {
+  /*dbl.on('posted', () => {
   console.log('[DBL API] Updated guild counter');
   })
 
   dbl.on('error', e => {
  console.log(`[DBL API] An error occured >> ${e}`);
-  })
+  })*/
 }
