@@ -4,8 +4,8 @@
   "Client_NoPerm_guildMessageEmbed": "**Hum... I'm sorry, but I can't do anything without the required permissions! *(Embed links, Attach files...)***",
   "Client_NoPerm_guildManageMessage": "**Hum... I'm sorry, but I can't delete messages without permission! *(Manage messages)***",
 
-  "Jan": "Januar",
-  "Febr": "Februar",
+  "Jan": "January",
+  "Febr": "February",
   "Mar": "March",
   "Apr": "April",
   "May": "May",
