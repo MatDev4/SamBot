@@ -30,8 +30,9 @@ module.exports = (client, guild, message) => {
     .addField("👨 Members", guild.memberCount, true)
     .setTimestamp(new Date())
     client.guilds.get('496373309621927956').channels.get('511240789834334238').send(guildCreateEmbed).catch((err) => {
-    console.log(`New Guild! - ${guild.name} | ${guild.id}`);
+    console.log(`PROBLEM! | Added on ${guild.name} | ${guild.id}`);
           })
-    client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `Guilds: ${client.guilds.size}`})
-    client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `Users: ${client.users.size}`})
+    console.log(`Added on ${guild.name} | ${guild.id}`)
+    client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `🎸 Guilds: ${client.guilds.size}`})
+    client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `👥 Users: ${client.users.size}`})
 }
