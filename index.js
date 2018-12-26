@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const DBLAPI = require("dblapi.js");
-const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
+/*const DBLAPI = require("dblapi.js");
+const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);*/
 const figlet = require('figlet');
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
