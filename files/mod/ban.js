@@ -43,6 +43,7 @@ module.exports.run = async (bot, message, args) => {
     } else {
         banChannel.send(SanctionEmbedBan)
         }
+    message.delete()
     message.guild.member(bUser).ban(bReason);
 };
 
