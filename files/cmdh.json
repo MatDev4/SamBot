@@ -5,5 +5,5 @@
     "helpimg": "`arc` ; `cat` ; `dog`",
     "helpmod": "`ban` ; `kick` ; `poll` ; `purge`",
 
-    "helpdev": "`sam-rules` ; `sam-test`"
+    "helpdev": "`sam-test`"
 }
