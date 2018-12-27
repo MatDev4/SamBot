@@ -43,6 +43,7 @@ module.exports.run = async (bot, message, args) => {
     } else {
         kickChannel.send(SanctionEmbedKick)
         }
+    message.delete()
     message.guild.member(kUser).kick(kReason);
 };
 
