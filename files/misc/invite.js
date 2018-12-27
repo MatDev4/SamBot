@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let orange = botconfig.orange
     let blue = botconfig.discordblue
     const InviteEmbed = new Discord.RichEmbed()
-    .setTitle(client.user.tag)
+    .setTitle(client.tag)
     .setDescription("Hey, thanks for inviting me to your Discord server! By inviting me, you encourage my developers and improve my visibility on Discord.")
     .addField("**Basic invitation", "This invitation is the default when you invite me. It contains all the required permissions. [> Invite](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786)", true)
     .addField("**Administrator**", "You can make me join your server with Administrator permission, this allows you not to need to change the Bot permissions as updates are made. [> Invite](https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=481753714982518786)", true)
