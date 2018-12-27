@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("A member has been kicked!")
     .setColor(botconfig.kickcolor)
     .setTimestamp()
-    .addField("🔤 Username", bUser.user.tag, true)
+    .addField("🔤 Username", kUser.user.tag, true)
     .addField("🆔 ID", kUser.id, true)
     .addField("📣 Channel", message.channel.name, true)
     .addBlankField(false)
