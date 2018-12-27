@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const client = new Discord.Client({disableEveryone: true});
 const DBLAPI = require("dblapi.js");
 const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
 
