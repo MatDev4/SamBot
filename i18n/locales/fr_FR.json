@@ -72,9 +72,15 @@
 
   "googlesearch-Footer": "Clique sur le texte bleu pour accéder au site",
 
-  "invite-Title": "Inviter SamBot",
-  "invite-Field1": "Cliquez sur le lien ci-dessous",
-  "invite-NormalLink": "SamBot",
+  "invite-EmbedDesc": "Hey, merci de vouloir m'inviter sur votre serveur Discord ! En m'invitant, vous encouragez mes développeurs et améliorez ma visibilité sur Discord.",
+  "invite-EmbedField_NormalLink_Title": "**Invitation basique**",
+  "invite-EmbedField_NormalLink_Desc": "Cette invitation est celle par défaut lorsque vous m'invitez. Elle contient toutes les permissions requises. [> Inviter](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786)",
+  "invite-EmbedField_AdministratorLink_Title": "**Administrateur**",
+  "invite-EmbedField_AdministratorLink_Desc": "Vous pouvez me faire rejoindre votre serveur avec la permission Administrateur, cela vous permet de ne pas avoir besoin de changer les permissions du Bot au fil des mises à jour. [> Inviter](https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=481753714982518786)",
+  "invite-EmbedField_NoPermissionLink_Title": "**Aucune permission**",
+  "invite-EmbedField_NoPermissionLink_Desc": "Vous souhaitez m'inviter juste pour décorer ? OK. [> Inviter](https://discordapp.com/oauth2/authorize/?permissions=0&scope=bot&client_id=481753714982518786)",
+  "invite-EmbedField_CustomPermissionsLink_Title": "**Configurer les permissions**",
+  "invite-EmbedField_CustomPermissionsLink_Desc": "Cela peut s'avérer pratique quand vous voulez avoir un contrôle parfait de mes permissions. [> Inviter](https://discordapp.com/oauth2/authorize/?permissions=2146958839&scope=bot&client_id=481753714982518786)",
 
   "npms-Author": "Auteur",
   "nms-Latest": "Denières informations",
