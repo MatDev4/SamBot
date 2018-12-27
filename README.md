@@ -39,4 +39,4 @@ SamBot is a Bot Discord created by @Nicoxx45 *(Ze_Dreams)*. The Bot has a multit
 - [UniX Team](https://github.com/UniX-Team/) 
 - Moitié prix
 
-[![Discord Bots](https://discordbots.org/api/widget/481753714982518786.svg)](https://discordbots.org/bot/481753714982518786)
+[![Discord Bots](https://discordbots.org/api/widget/481753714982518786.svg?usernamecolor=E8F1F2&topcolor=1F2121&middlecolor=37393A&highlightcolor=37393A&datacolor=E8F1F2&labelcolor=C7D3DD)](https://discordbots.org/bot/481753714982518786)
