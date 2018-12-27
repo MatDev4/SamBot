@@ -1,9 +1,0 @@
-{
-    "helpfun": "`8ball ` ; `12dice` ; `dice` ; `ascii` ; `billsay` ; `cash-machine` ; `cowsay` ; `catfact` ; `fish` ; `urban-dictionary` ; `rps`",
-    "helptools": "`guild` ; `ping` ; `members` ; `roles` ; `role` ; `emoji` ; `botinfo` ; `userinfo`",
-    "helpmisc": "`help` ; `invite` ; `google-search` ; `youtube-search` ; `npm-search` ; `spotify` ; `create-invite`",
-    "helpimg": "`avatar` ; `cat` ; `dog` ; `blurple ` ; `blur` ; `invert` ; `convolute` ; `darkgreen` ; `darkred` ; `french` ; `ghost` ; `green` ; `sepia` ; `orangly` ; `pixelate` ; `rainbow` ; `spotify-img` ; `steam-img` ; `triggered`",
-    "helpmod": "`langs` ; `purge` ; `poll`",
-
-    "helpdev": "`sam-test`"
-}
