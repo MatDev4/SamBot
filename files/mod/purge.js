@@ -13,8 +13,10 @@ module.exports.run = async (bot, message, args) => {
     if (message.content.indexOf(prefix) !== 0) return;
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
+    if(!client.hasPermission("MANAGE_MESSAGES")) return message.channel.send("**Hum... I'm sorry, but I can't delete messages without permission! *(Manage messages)***")
     let f = misc.fleche
-    let logsChannel = message.guild.channels.find(`name`, "sam-logs");
+    let logsChannel = message.guild.channels.find(ch => ch.name === 'sam-logs');
+
 
     const PurgeFinishEmbed = new Discord.RichEmbed()
     .setTitle('- PURGE -')
