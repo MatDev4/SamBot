@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
+const client = new Discord.Client({disableEveryone: true});
 const DBLAPI = require("dblapi.js");
 const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
 const db = require('quick.db');
 const figlet = require('figlet');
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
-const client = new Discord.Client({disableEveryone: true});
 const ytdl = require('ytdl-core');
 const cmds = client;
 const img = client;
