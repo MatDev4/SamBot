@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     if (message.content.indexOf(prefix) !== 0) return;
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
-    if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.channel.send("**Hum... I'm sorry, but I can't ban if I don't have the required permission! *(Ban members)***");
+    //if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.channel.send("**Hum... I'm sorry, but I can't ban if I don't have the required permission! *(Ban members)***");
 
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("You are not allowed to ban! *(BAN_MEMBERS)*");
 
@@ -36,6 +36,9 @@ module.exports.run = async (bot, message, args) => {
     .addField("🛑 Moderateur", message.author.tag)
     .addField("🙀 Reason", bReason)
 
+try{
+  message.delete()
+  message.guild.member(bUser).ban(bReason).then(async notused => {
     let banChannel = message.guild.channels.find(ch => ch.name === 'sam-logs');
     if(!banChannel) { message.channel.send("Having not found a salon named `sam-logs`, I send you the proof here. Feel free to create a lounge called `sam-logs`!").then(async msg => {
         await msg.react('498522777523847168')
@@ -44,8 +47,11 @@ module.exports.run = async (bot, message, args) => {
     } else {
         banChannel.send(SanctionEmbedBan)
         }
-    message.delete()
-    message.guild.member(bUser).ban(bReason);
+  })
+}catch(e){
+  message.channel.send("**Hum... I'm sorry, but I can't ban if I don't have the required permission! *(Ban members)***")
+}
+
 };
 
 module.exports.help = {
