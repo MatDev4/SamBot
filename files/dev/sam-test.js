@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
   const { body: ujavatar } = await get(member.user.displayAvatarURL.replace(imageUrlRegex, "?size=128"));
   const ujname = member.displayName.length > 20 ? member.displayName.substring(0, 17) + "..." : member.displayName;
 
-new Canvas(500, 400)
+const testttt = new Canvas(500, 400)
  .setColor('#f5f0f4')
  .addRect(84, 0, 316, 180)
  .setColor("#2C2F33")
@@ -34,8 +34,13 @@ new Canvas(500, 400)
  .setTextFont("10pt Discord")
  .setColor("#FFFFFF")
  .addText(ujname, 285, 54)
-Canvas.registerFont(resolve(join(__dirname, "./assets/fonts/Discord.ttf")), "Discord");
 
+await message.channel.send({
+  files: [{
+    attachment: testttt,
+    name: `t.jpg`
+  }]
+})
 }
 
 
