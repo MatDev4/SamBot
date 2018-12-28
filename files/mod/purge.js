@@ -25,13 +25,18 @@ module.exports.run = async (bot, message, args) => {
     .setFooter('Messages that are 14 days old cannot be deleted, Discord told me so!')
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You are not allowed to use these command! *(MANAGE_MESSAGE)*");
-
+/*
     if(isNaN(args[0])) return message.channel.send("Please indicate a number only.");
     if (!args[0]) return message.channel.send("Please indicate a number between 2 and 100.");
     if (args[0] < 2) return message.channel.send("Please indicate a number between 2 and 100.");
     if (args[0] > 100) return message.channel.send("Please indicate a number between 2 and 100.");
+    */
 
     if (args[0]) {
+      if(isNaN(args[0])) return message.channel.send("Please indicate a number only.");
+      if (!args[0]) return message.channel.send("Please indicate a number between 2 and 100.");
+      if (args[0] < 2) return message.channel.send("Please indicate a number between 2 and 100.");
+      if (args[0] > 100) return message.channel.send("Please indicate a number between 2 and 100.");
       message.delete()
       message.channel.bulkDelete(args[0]).then (async notused => {
         if(!logsChannel) { message.channel.send("Having not found a salon named `sam-logs`, I send you the proof here. Feel free to create a lounge called `sam-logs`!").then(async msg => {
