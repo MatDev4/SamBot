@@ -34,7 +34,7 @@ fs.readdir("./files/fun/", (err, files) => {
     console.log(`[FUN] Il n'y a rien...`);
     return;
   }
- 
+
   jsfile.forEach((f, i) =>{
     let props = require(`./files/fun/${f}`);
     console.log(`[FUN] ${f} loaded!`);
@@ -105,6 +105,7 @@ fs.readdir("./files/dev/", (err, files) => {
     cmds.dev.set(props.help.name, props);
   });
 });
+/*
 fs.readdir("./files/img/", (err, files) => {
   console.log('====================================')
 
@@ -166,6 +167,7 @@ fs.readdir("./files/img/gifs/", (err, files) => {
     img.gifs.set(props.help.name, props);
   });
 });
+*/
 fs.readdir('./files/APIevents/', (err, files) => {
   console.log('====================================')
 
