@@ -34,7 +34,7 @@ fs.readdir("./files/fun/", (err, files) => {
     console.log(`[FUN] Il n'y a rien...`);
     return;
   }
-
+ 
   jsfile.forEach((f, i) =>{
     let props = require(`./files/fun/${f}`);
     console.log(`[FUN] ${f} loaded!`);
