@@ -21,7 +21,6 @@ module.exports.run = async (client, message, args) => {
   const SeeConfigEmbed = new Discord.RichEmbed()
   .setTitle(`.. ${message.guild.name}`)
   .setColor(botconfig.discordblue)
-  .setThumbmail(message.guild.iconURL)
   .addField("#⃣ ..", `.. ${f} ..\n.. ${f} ..\n.. ${f} ..\n.. ${f} ..\n.. ${f} ..`, true)
   .addField("⚜ ..", `.. ${f} ..\n.. ${f} ..\n.. ${f} ..\n.. ${f} ..\n.. ${f} ..`, true)
   .addField("🚘 ..", `.. ${f} ..\n.. ${f} ..\n.. ${f} ..\n.. ${f} ..\n.. ${f} ..`, true)
