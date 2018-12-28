@@ -14,7 +14,6 @@ module.exports.run = async (bot, message, args) => {
     if (message.content.indexOf(prefix) !== 0) return;
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
-    if(!client.hasPermission("KICK_MEMBER")) return message.channel.send("**Hum.... I'm sorry, but I can't kick if I don't have the required permission! *(Kick members)***");
 
     if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("You are not allowed to kick! *(KICK_MEMBERS)*");
 
@@ -33,19 +32,26 @@ module.exports.run = async (bot, message, args) => {
     .addField("🆔 ID", kUser.id, true)
     .addField("📣 Channel", message.channel.name, true)
     .addBlankField(false)
-    .addField("🛑 Moderateur", message.author.tag)
+    .addField("🛑 Moderator", message.author.tag)
     .addField("🙀 Reason", kReason)
 
-    let kickChannel = message.guild.channels.find(ch => ch.name === 'sam-logs');
-    if(!kickChannel) { message.channel.send("Having not found a salon named `sam-logs`, I send you the proof here. Feel free to create a lounge called `sam-logs`!").then(async msg => {
-        await msg.react('498522777523847168')
-        await message.channel.send(SanctionEmbedKick)
-    })
-    } else {
-        kickChannel.send(SanctionEmbedKick)
-        }
-    message.delete()
-    message.guild.member(kUser).kick(kReason);
+    if (kUser) {
+      message.delete()
+      message.guild.member(kUser).kick(kReason).then(async notused => {
+        let kickChannel = message.guild.channels.find(ch => ch.name === 'sam-logs');
+        if(!kickChannel) {
+         message.channel.send("Having not found a salon named `sam-logs`, I send you the proof here. Feel free to create a lounge called `sam-logs`!").then(async msg => {
+          await msg.react('498522777523847168')
+          await message.channel.send(SanctionEmbedKick)
+         })
+        } else {
+          kickChannel.send(SanctionEmbedKick)
+            }
+            }).catch(err => {
+              message.reply("**Hum... I'm sorry, but I can't kick if I don't have the required permission! *(Kick members)***");
+            });
+          }
+
 };
 
 module.exports.help = {
