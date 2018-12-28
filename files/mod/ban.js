@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     if (message.content.indexOf(prefix) !== 0) return;
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
-    if(!client.user.hasPermission("BAN_MEMBERS")) return message.channel.send("**Hum... I'm sorry, but I can't ban if I don't have the required permission! *(Ban members)***");
+    if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.channel.send("**Hum... I'm sorry, but I can't ban if I don't have the required permission! *(Ban members)***");
 
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("You are not allowed to ban! *(BAN_MEMBERS)*");
 
