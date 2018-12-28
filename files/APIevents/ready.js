@@ -2,9 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client({disableEveryone: true});
 const DBLAPI = require("dblapi.js");
 const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
+/*
 const DDBLAPI = require("ddblapi.js");
 const ddbl = new DDBLAPI(process.env.TOKEN_DDBLAPI);
-
+*/
 
 module.exports = (client) => {
 
@@ -25,5 +26,5 @@ module.exports = (client) => {
   dbl.on('error', e => {
  console.log(`[DBL API] An error occured >> ${e}`);
   })
-  ddbl.postStats(client.user.id, client.guilds.size);
+  //ddbl.postStats(client.user.id, client.guilds.size);
 }
