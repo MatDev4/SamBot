@@ -42,5 +42,5 @@ module.exports = (client, guild, message) => {
     client.guilds.get('496373309621927956').channels.get('525354074128777217').edit({ name: `🎸 Guilds: ${client.guilds.size}`})
     client.guilds.get('496373309621927956').channels.get('525354138268073984').edit({ name: `👥 Users: ${client.users.size}`})
     dbl.postStats(client.guilds.size)
-    ddbl.postStats(client.user.id, client.guilds.size);
+    //ddbl.postStats(client.user.id, client.guilds.size);
 }
