@@ -2,8 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client({disableEveryone: true});
 const DBLAPI = require("dblapi.js");
 const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
+/*
 const DDBLAPI = require("ddblapi.js");
 const ddbl = new DDBLAPI(process.env.TOKEN_DDBLAPI);
+*/
 const db = require('quick.db')
 const figlet = require('figlet');
 const botconfig = require("./botconfig.json");
