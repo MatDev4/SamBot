@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
   if (message.content.indexOf(prefix) !== 0) return;
   if (message.channel.type === "dm") return;
   if(message.author.bot) return;
-  if(!message.author.hasPermission('ADMINISTRATOR')) return message.channel.send("..")
+  if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send("..")
 
   let f = misc.fleche
   let ON = misc.DiscordOnline
