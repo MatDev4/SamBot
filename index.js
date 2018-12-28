@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client({disableEveryone: true});
 const DBLAPI = require("dblapi.js");
 const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
-const db = require('quick.db');
+const db = require('quick.db')
 const figlet = require('figlet');
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
@@ -23,6 +23,7 @@ cmds.img = new Discord.Collection();
  img.gens = new Discord.Collection();
  img.gifs = new Discord.Collection();
 client.APIevents = new Discord.Collection();
+cmds.guildconfig = new Discord.Collection();
 
 fs.readdir("./files/fun/", (err, files) => {
   console.log('====================================')
@@ -166,6 +167,7 @@ fs.readdir("./files/img/gifs/", (err, files) => {
   });
 });
 fs.readdir('./files/APIevents/', (err, files) => {
+  console.log('====================================')
 
   if(err) console.log(err)
 
@@ -175,6 +177,22 @@ fs.readdir('./files/APIevents/', (err, files) => {
       console.log(`[EVENTS] ${f}  !`);
       client.on(f.split('.')[0], event.bind(null, client));
       delete require.cache[require.resolve(`./files/APIevents/${f}`)];
+  });
+});
+fs.readdir("./files/guildConfiguration/", (err, files) => {
+  console.log('====================================')
+
+  if(err) console.log(err);
+  let jsfile = files.filter(f => f.split(".").pop() === "js");
+  if(jsfile.length <= 0){
+    console.log(`[guildCONFIGURATION] Il n'y a rien...`);
+    return;
+  }
+
+  jsfile.forEach((f, i) =>{
+    let props = require(`./files/guildConfiguration/${f}`);
+    console.log(`[guildCONFIGURATION] ${f} loaded!`);
+    cmds.guildconfig.set(props.help.name, props);
   });
 });
 
@@ -203,6 +221,8 @@ client.on("message", message => {
   if(imggifs) imggifs.run(client, message, args);
   let eventsfilters = client.APIevents.get(cmd.slice(prefix.length));
   if(eventsfilters) eventsfilters.run(client, message, args);
+  let cmdguildconfig = cmds.guildconfig.get(cmd.slice(prefix.length));
+  if(cmdguildconfig) cmdguildconfig.run(client, message, args);
 });
 /*FS END*/
 /* i18n */
