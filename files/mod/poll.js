@@ -20,8 +20,6 @@ module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You are not allowed to use these command! *(MANAGE_MESSAGE)*");;
 
 
-    message.delete()
-
       if (!args[0]) return message.channel.send("Please indicate a question to ask!");
 
       const PollEmbed = new Discord.RichEmbed()

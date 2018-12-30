@@ -36,7 +36,6 @@ module.exports.run = async (bot, message, args) => {
     .addField("🙀 Reason", kReason)
 
     if (kUser) {
-      message.delete()
       message.guild.member(kUser).kick(kReason).then(async notused => {
         let kickChannel = message.guild.channels.find(ch => ch.name === 'sam-logs');
         if(!kickChannel) {

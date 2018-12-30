@@ -37,7 +37,6 @@ module.exports.run = async (bot, message, args) => {
 
 
 if (bUser) {
-  message.delete()
   message.guild.member(bUser).ban(bReason).then(async notused => {
     let banChannel = message.guild.channels.find(ch => ch.name === 'sam-logs');
     if(!banChannel) {
