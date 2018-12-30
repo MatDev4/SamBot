@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
     .addField(`${ON} | 🍪 Fun`, cmdh.helpfun, true)
     .addField(`${ON} | 🔨 Tools`, cmdh.helptools, true)
     .addField(`${ON} | 🎭 Miscellaneous`, cmdh.helpmisc, true)
-    .addField(`${ON} | 📸 Images`, cmdh.helpimg)
+    .addField(`${OFF} | 📸 Images`, cmdh.helpimg)
     .addField(`${WIP} | 🛑 Moderation`, cmdh.helpmod, true)
     .addField(`${ON} | 🔐 Reserved commands`, cmdh.helpdev, true)
     .addField("🎫 Links", `[Invite me](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786) | [My support server](https://discord.gg/Y8GgT2g) | [Discord Bots](https://discord.gg/Y8GgT2g) | [DivineDiscordBots](https://divinediscordbots.com/bots/481753714982518786)`)
