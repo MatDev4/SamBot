@@ -16,12 +16,12 @@ module.exports.run = async (bot, message, args) => {
 
     let blue = botconfig.discordblue
     let muser = message.mentions.users.first() || message.author;
-    message.channel.send({
-        files: [{
-          attachment: `${muser.avatarURL}`,
-          name: `${muser.username}-avatar.png`
-        }]
-      });
+    const AvatarEmbed = new Discord.RichEmbed()
+    .setColor(blue)
+    .setTitle(`${muser.username} avatar`)
+    .setDescription(`Download: [> LINK](${muser.avatarURL})`)
+    .setImage(muser.avatarURL)
+    message.channel.send(AvatarEmbed)
 }
 
 module.exports.help = {
