@@ -21,8 +21,8 @@ module.exports.run = async (bot, message, args) => {
       };
 
 
-    let role = message.mentions.roles.first() || message.guild.roles.find(role => role.name === args[0]);
-    if (!role) return message.channel.send(`I didn't find ${args[0]}.`)
+    let role = message.mentions.roles.first() || message.guild.roles.find(role => role.name === args.join(" "));
+    if (!role) return message.channel.send(`I didn't find ${args.join(" ")}.`)
 
     let month = {
         "1": "January",

@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     if (message.content.indexOf(prefix) !== 0) return;
     if (message.channel.type === "dm") return;
     if(message.author.bot) return;
-    let muser = message.mentions.users.first() || message.author || message.guild.members.get(args[0]);
+    let muser = message.mentions.users.first() || message.author || message.guild.members.get(args.join(" "));
     if(!muser) muser = message.author;
 
 
