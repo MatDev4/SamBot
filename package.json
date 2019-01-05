@@ -18,6 +18,7 @@
     "ddblapi.js": "0.0.7",
     "discord.js": "^11.4.2",
     "figlet": "^1.2.0",
+    "fs-nextra": "^0.3.7",
     "gifencoder": "^1.1.0",
     "google": "^2.1.0",
     "google-translate-api": "^2.3.0",
