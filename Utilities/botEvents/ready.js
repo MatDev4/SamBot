@@ -6,7 +6,7 @@ const dbl = new DBLAPI(process.env.TOKEN_DBLAPI, client);
 const DDBLAPI = require("ddblapi.js");
 const ddbl = new DDBLAPI(process.env.TOKEN_DDBLAPI);
 */
-const Config = require('./Config.json');
+const Config = require('../Config.json');
 
 
 module.exports = (client) => {
