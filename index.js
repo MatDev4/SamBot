@@ -27,92 +27,92 @@ client.Tools = new Discord.Collection();
 client.Config = new Discord.Collection();
 client.botAdmin = new Discord.Collection();
 
-fs.readdir('./botEvents/', (err, files) => {
+fs.readdir('./Utilities/botEvents/', (err, files) => {
   console.log(' ')
   if(err) console.log(err)
   files = files.filter(f => f.endsWith('.js'));
   files.forEach(f => {
-      const event = require(`./botEvents/${f}`);
+      const event = require(`./Utilities/botEvents/${f}`);
       console.log(`!! ${Config.Client.Tag} >> ${f} event loaded in the botEvents folder.`);
       client.on(f.split('.')[0], event.bind(null, client));
       delete require.cache[require.resolve(`./botEvents/${f}`)];
   });
 });
-fs.readdir("../Files/Fun/", (err, files) => {
+fs.readdir("./Files/Fun/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0) return console.log(`!! ${Config.Client.Tag} >> I didn't detect any JavaScript files in the Fun folder.`);
   jsfile.forEach((f, i) =>{
-    let props = require(`../Files/Fun/${f}`);
+    let props = require(`./Files/Fun/${f}`);
     console.log(`!! ${Config.Client.Tag} >> ${f} loaded in the Fun folder.`);
     client.Fun.set(props.help.name, props);
   });
 });
 
-fs.readdir("../Files/Img/", (err, files) => {
+fs.readdir("./Files/Img/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0) return console.log(`!! ${Config.Client.Tag} >> I didn't detect any JavaScript files in the Img folder.`);
   jsfile.forEach((f, i) =>{
-    let props = require(`../Files/Img/${f}`);
+    let props = require(`./Files/Img/${f}`);
     console.log(`!! ${Config.Client.Tag} >> ${f} loaded in the Img folder.`);
     client.Img.set(props.help.name, props);
   });
 });
 
-fs.readdir("../Files/Misc/", (err, files) => {
+fs.readdir("./Files/Misc/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0) return console.log(`!! ${Config.Client.Tag} >> I didn't detect any JavaScript files in the Misc folder.`);
   jsfile.forEach((f, i) =>{
-    let props = require(`../Files/Misc/${f}`);
+    let props = require(`./Files/Misc/${f}`);
     console.log(`!! ${Config.Client.Tag} >> ${f} loaded in the Misc folder.`);
     client.Misc.set(props.help.name, props);
   });
 });
-fs.readdir("../Files/Mod/", (err, files) => {
+fs.readdir("./Files/Mod/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0) return console.log(`!! ${Config.Client.Tag} >> I didn't detect any JavaScript files in the Mod folder.`);
   jsfile.forEach((f, i) =>{
-    let props = require(`../Files/Mod/${f}`);
+    let props = require(`./Files/Mod/${f}`);
     console.log(`!! ${Config.Client.Tag} >> ${f} loaded in the Mod folder.`);
     client.Mod.set(props.help.name, props);
   });
 });
-fs.readdir("../Files/Tools/", (err, files) => {
+fs.readdir("./Files/Tools/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0) return console.log(`!! ${Config.Client.Tag} >> I didn't detect any JavaScript files in the Tools folder.`);
   jsfile.forEach((f, i) =>{
-    let props = require(`../Files/Tools/${f}`);
+    let props = require(`./Files/Tools/${f}`);
     console.log(`!! ${Config.Client.Tag} >> ${f} loaded in the Tools folder.`);
     client.Tools.set(props.help.name, props);
   });
 });
-fs.readdir("../Files/Config/", (err, files) => {
+fs.readdir("./Files/Config/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0) return console.log(`!! ${Config.Client.Tag} >> I didn't detect any JavaScript files in the Config folder.`);
   jsfile.forEach((f, i) =>{
-    let props = require(`../Files/Config/${f}`);
+    let props = require(`./Files/Config/${f}`);
     console.log(`!! ${Config.Client.Tag} >> ${f} loaded in the Config folder.`);
     client.Config.set(props.help.name, props);
   });
 });
-fs.readdir("../Files/botAdmin/", (err, files) => {
+fs.readdir("./Files/botAdmin/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0) return console.log(`!! ${Config.Client.Tag} >> I didn't detect any JavaScript files in the botAdmin folder.`);
   jsfile.forEach((f, i) =>{
-    let props = require(`../Files/botAdmin/${f}`);
+    let props = require(`./Files/botAdmin/${f}`);
     console.log(`!! ${Config.Client.Tag} >> ${f} loaded in the botAdmin folder.`);
     client.botAdmin.set(props.help.name, props);
   });
