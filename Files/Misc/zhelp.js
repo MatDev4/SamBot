@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
     .setFooter(Config.EmbedFooter)
     .setTimestamp()
     .setTitle(Config.Client.Tag)
-    .setDescription(`Welcome on the SamBot's documention\n My prefix is actually __**${botconfig.prefix}**__\n${ON} ${f} Functional unit ${WIP} ${f} Unit under development, risk of bugs${OFF} ${f} Unusable unit`)
+    .setDescription(`Welcome on the SamBot's documention\n My prefix is actually __**${prefix}**__\n${ON} ${f} Functional unit ${WIP} ${f} Unit under development, risk of bugs${OFF} ${f} Unusable unit`)
     .addField(`${ON} - 🍪 Fun`, List.Fun)
     .addField(`${ON} - 🔨 Tools`, List.Tools)
     .addField(`${ON} - 🎭 Miscellaneous`, List.Misc)
