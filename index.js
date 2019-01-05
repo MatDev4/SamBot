@@ -35,7 +35,7 @@ fs.readdir('./Utilities/botEvents/', (err, files) => {
       const event = require(`./Utilities/botEvents/${f}`);
       console.log(`!! ${Config.Client.Tag} >> ${f} event loaded in the botEvents folder.`);
       client.on(f.split('.')[0], event.bind(null, client));
-      delete require.cache[require.resolve(`./botEvents/${f}`)];
+      delete require.cache[require.resolve(`./Utilities/botEvents/${f}`)];
   });
 });
 fs.readdir("./Files/Fun/", (err, files) => {
