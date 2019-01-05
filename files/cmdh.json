@@ -1,9 +1,0 @@
-{
-    "helpfun": "`8ball ` ; `ascii` ; `cash-machine` ; `dice` ; `fish` ; `rps`",
-    "helptools": "`avatar` ; `ping` ; `role-info` ; `server-info` ; `user-info`",
-    "helpmisc": "`google-search` ; `invite` ; `help`",
-    "helpimg": "`arc` ; `cat` ; `dog`",
-    "helpmod": "`ban` ; `kick` ; `poll` ; `purge`",
-
-    "helpdev": "`sam-test`"
-}
