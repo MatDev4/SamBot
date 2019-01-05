@@ -1,0 +1,10 @@
+{
+  "Help": {
+    "Fun": "`8ball ` ; `ascii` ; `dice` ; `fish` ; `rps` ; `slot-machine`",
+    "Tools": "`avatar` ; `ping` ; `role-info` ; `server-info` ; `user-info`",
+    "Misc": "`google-search` ; `invite` ; `help`",
+    "Img": "`tobecontinued` ; `triggered`",
+    "Mod": "`ban` ; `kick` ; `poll` ; `purge`",
+    "botAdmin": "`sam-test`",
+  }
+}

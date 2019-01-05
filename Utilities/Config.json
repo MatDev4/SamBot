@@ -1,0 +1,19 @@
+{
+  "Prefix": "s!",
+  "EmbedFooter": "SamBot, your Discord assistant - NicoTine",
+  "Client": {
+    "Version": "0.9.7",
+    "Name": "SamBot",
+    "Discriminator": "#6445",
+    "Tag": "SamBot#6445",
+    "ID": "481753714982518786"
+  },
+  "Colors": {
+    "Red": "#f41010",
+    "Orange": "#ee9815",
+    "Yellow": "#ebe928",
+    "Green": "#55e760",
+    "Blue": "#52d8eb",
+    "Purple": "#b22de8"
+  }
+}
