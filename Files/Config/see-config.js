@@ -4,7 +4,7 @@ const client = new Discord.Client({disableEveryone: true});
 const Config = require('../../Utilities/Config.json');
 const Misc = require('../../Utilities/Misc.json');
 
-var prefix = (botconfig.prefix)
+var prefix = (Config.Prefix)
 
 module.exports.run = async (client, message, args) => {
   if (message.content.indexOf(prefix) !== 0) return;
