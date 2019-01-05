@@ -49,7 +49,7 @@ fs.readdir("./Files/Fun/", (err, files) => {
     client.Fun.set(props.help.name, props);
   });
 });
-
+/*
 fs.readdir("./Files/Img/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
@@ -61,7 +61,7 @@ fs.readdir("./Files/Img/", (err, files) => {
     client.Img.set(props.help.name, props);
   });
 });
-
+*/
 fs.readdir("./Files/Misc/", (err, files) => {
   console.log(' ')
   if(err) console.log(err);
