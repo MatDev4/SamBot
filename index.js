@@ -176,6 +176,6 @@ figlet('Figlet On !', function(err, data) {
   console.log(data)
 });
 
-var prefix = (botconfig.prefix)
+var prefix = (Config.Prefix)
 
 client.login(process.env.TOKEN);
