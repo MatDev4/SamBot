@@ -102,7 +102,6 @@ server.roles.map((a) => {
 });
 if(server.roles.size > 9) { r = rolesd += " and more..." } else { r= rolesd}
 
-let rolesd = server.roles.length > 12 ? server.roles.map(e=>e.toString()).join(" ¦ ").substring(0, 17) + "and more..." : server.roles.map(e=>e.toString()).join(" ¦ ");
 let CreateD = message.guild.createdAt.toString().split(' ');
 let JoinD = message.member.joinedAt.toString().split(' ');
 
