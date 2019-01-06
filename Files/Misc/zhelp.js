@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
     .addField(`${OFF} - 📸 Images`, List.Help.Img)
     .addField(`${WIP} - 🛑 Moderation`, List.Help.Mod)
     .addField(`${ON} - 🔐 Reserved commands`, List.Help.botAdmin)
-    .addField("🎫 Links", `${Misc.Invite.Normal} | ${Misc.Links.Discord} | ${Misc.Links.DBL}`)
+    .addField("🎫 Links", `${Misc.Invite.Basic} | ${Misc.Links.Discord} | ${Misc.Links.DBL}`)
 
   message.channel.send(HelpEmbed)
 }
