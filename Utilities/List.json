@@ -5,6 +5,7 @@
     "Misc": "`google-search` ; `invite` ; `help`",
     "Img": "`tobecontinued` ; `triggered`",
     "Mod": "`ban` ; `kick` ; `poll` ; `purge`",
-    "botAdmin": "`sam-test`"
+    "botAdmin": "`sam-test`",
+    "Config": "`see-config` ; `set-autorole` ; `set-captcha` ; `set-channel` ; `set-role`"
   }
 }
