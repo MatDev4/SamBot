@@ -27,7 +27,7 @@ let GTS = Misc.Characters.GTS
 let DOnline = Misc.Emotes.Online
 let DIdle = Misc.Emotes.Idle
 let DDnD = Misc.Emotes.DnD
-let DOffline = Mosc.Emotes.Offline
+let DOffline = Misc.Emotes.Offline
 let DStreaming = Misc.Emotes.Streaming
 let server = message.guild;
 

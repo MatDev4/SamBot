@@ -10,13 +10,13 @@
     "GTS": "[»](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786)"
   },
   "Links": {
-    "Invite": {
-      "Basic": "[[> Invite]](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786)",
-      "Admin": "[[> Invite]](https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=481753714982518786)",
-      "NoPerm": "[[> Invite]](https://discordapp.com/oauth2/authorize/?permissions=0&scope=bot&client_id=481753714982518786)",
-      "PermConfig": "[[>Invite]](https://discordapp.com/oauth2/authorize/?permissions=2146958839&scope=bot&client_id=481753714982518786)"
-    },
     "DBL": "[[> Vote on DiscordBots]](https://discordbots.org/bot/481753714982518786)",
     "Discord": "[[> Join my Support server]](https://discord.gg/Y8GgT2g)"
-  }
+  },
+  "Invite": {
+        "Basic": "[[> Invite]](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786)",
+        "Admin": "[[> Invite]](https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=481753714982518786)",
+        "NoPerm": "[[> Invite]](https://discordapp.com/oauth2/authorize/?permissions=0&scope=bot&client_id=481753714982518786)",
+        "PermConfig": "[[>Invite]](https://discordapp.com/oauth2/authorize/?permissions=2146958839&scope=bot&client_id=481753714982518786)"
+      }
 }
