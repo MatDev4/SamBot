@@ -5,6 +5,8 @@ Help us: https://github.com/MissSamBot/languages
 
 SamBot is a Bot Discord created by **NicoTine**. The Bot has a multitude of commands.
 
+**Soon: SamBot v 1.0.0**
+
 By inviting me, you encourage my developers and improve my visibility on Discord. [[> Invite]](https://discordapp.com/oauth2/authorize/?permissions=2146827639&scope=bot&client_id=481753714982518786)
 > **PROTIP:** More invitations links can be find by running `s!invite`!
 
